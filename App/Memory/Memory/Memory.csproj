@@ -68,7 +68,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MemoryGrid.cs" />
+    <Compile Include="MemoryGrid.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
