@@ -20,9 +20,11 @@ namespace Memory
     /// </summary>
     public partial class MainWindow : Window
     {
+        MemoryGrid grid;
         public MainWindow()
         {
             InitializeComponent();
+            grid = new MemoryGrid(GameGrid, 4, 4);
         }
     }
 }
