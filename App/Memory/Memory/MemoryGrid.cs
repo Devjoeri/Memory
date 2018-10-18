@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Memory
@@ -15,6 +16,7 @@ namespace Memory
         {
             this.grid = grid;
             initGrid(colums, rows);
+            AddLabel();
         }
         private void initGrid(int colums, int rows)
         {
@@ -26,6 +28,16 @@ namespace Memory
             {
                 grid.ColumnDefinitions.Add(new ColumnDefinition());
             }
+        }
+        private void AddLabel()
+        {
+            Label title = new Label();
+            title.Content = "The game";
+            title.FontSize = 40;
+            title.HorizontalAlignment = HorizontalAlignment.Center;
+
+            Grid.SetColumn(title, 1);
+            grid.Children.Add(title);
         }
     }
 }

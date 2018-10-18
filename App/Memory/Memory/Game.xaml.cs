@@ -21,9 +21,10 @@ namespace Memory
     public partial class Game : Page
     {
         MemoryGrid grid;
-        public Game()
+        private INavigator _navigator;
+        public Game(INavigator navigator)
         {
-            InitializeComponent();
+            _navigator = navigator;
             InitializeComponent();
             grid = new MemoryGrid(GameGrid, 4, 4);
         }

@@ -16,19 +16,19 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class MainWindow : INavigator
+    public partial class MainMenu : Page
     {
-        
-        public MainWindow()
+        private INavigator _navigator;
+        public MainMenu(INavigator navigator)
         {
+            this._navigator = navigator;
             InitializeComponent();
-            Navigate(new MainMenu(this));
         }
-        public void Navigate(Page p)
+        private void SinglePlayerButton(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(p);
+            _navigator.Navigate(new Game(_navigator));
         }
     }
 }
