@@ -9,6 +9,6 @@
       Title="Mainmenu">
 
     <Grid x:Name="MainMenu" OpacityMask="White">
-        <Button ></Button>
+        <Button Click="SinglePlayer" Content="Single Player" ></Button>
     </Grid>
 </Page>

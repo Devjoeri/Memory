@@ -24,7 +24,7 @@ namespace Memory
         public MainWindow()
         {
             InitializeComponent();
-            Navigate(new MainMenu(this));
+            Navigate(new Mainmenu(this));
         }
         public void Navigate(Page p)
         {

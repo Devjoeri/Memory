@@ -20,9 +20,16 @@ namespace Memory
     /// </summary>
     public partial class Mainmenu : Page
     {
-        public Mainmenu()
+        private INavigator _navigator;
+        public Mainmenu(INavigator navigator)
         {
+            _navigator = navigator;
             InitializeComponent();
+        }
+
+        private void SinglePlayer(object sender, RoutedEventArgs e)
+        {
+            _navigator.Navigate(new Game(_navigator));
         }
     }
 }
