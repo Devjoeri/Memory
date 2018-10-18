@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:Memory"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="GameGrid">
-
-    </Grid>
+    
 </Window>

@@ -16,14 +16,16 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Game.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Game : Page
     {
-        
-        public MainWindow()
+        MemoryGrid grid;
+        public Game()
         {
-            
+            InitializeComponent();
+            InitializeComponent();
+            grid = new MemoryGrid(GameGrid, 4, 4);
         }
     }
 }
