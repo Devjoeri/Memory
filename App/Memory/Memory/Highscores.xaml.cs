@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for Mainmenu.xaml
+    /// Interaction logic for Highscores.xaml
     /// </summary>
-    public partial class Mainmenu : Page
+    public partial class Highscores : Window
     {
-        public Mainmenu()
+        public Highscores()
         {
             InitializeComponent();
         }

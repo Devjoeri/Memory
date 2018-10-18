@@ -1,0 +1,13 @@
+﻿<Window x:Class="Memory.zelfdeNaam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory"
+        mc:Ignorable="d"
+        Title="Oeps" Height="240" Width="800">
+    <Grid>
+        <Label Content="Speler 1 en 2 hebben de zelfde naam, verander speler 2 zijn naam" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button Content="Okay" HorizontalAlignment="Center" Margin="0,0,0,24" Padding="16,4,16,4" VerticalAlignment="Bottom" FontSize="18"/>
+    </Grid>
+</Window>
