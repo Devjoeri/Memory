@@ -15,12 +15,13 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for Highscores.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Highscores : Window
     {
-        public Window1()
+        public Highscores()
         {
+            InitializeComponent();
         }
     }
 }
