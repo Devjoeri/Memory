@@ -8,7 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Mainmenu">
 
-    <Grid x:Name="MainMenu" OpacityMask="White">
-        <Button Click="SinglePlayer" Content="Single Player" ></Button>
+    <Grid x:Name="MainMenu">
+        <Button Click="SinglePlayer" Content="Single Player" Width="100" Height="30" />
+        <Button Click="Settings" Content="Settings" Width="100" Height="50" Margin="220,328,480,71.6"/>
     </Grid>
 </Page>
