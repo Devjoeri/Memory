@@ -10,6 +10,9 @@
 
     <Grid x:Name="MainMenu">
         <Button Click="SinglePlayer" Content="Single Player" Width="100" Height="30" />
-        <Button Click="Settings" Content="Settings" Width="100" Height="50" Margin="220,328,480,71.6"/>
+        <Button Content="NL" Margin="10,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
+        <Button Content="Eng" Margin="127,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
+        <Button Content="Frs" Margin="244,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
+        <Button Content="Yarr?" Margin="361,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>
