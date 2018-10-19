@@ -31,5 +31,11 @@ namespace Memory
         {
             _navigator.Navigate(new Game(_navigator));
         }
+
+        private void Highscores(object sender, RoutedEventArgs e)
+        {
+            _navigator.Navigate(new Highscores(_navigator));
+        }
+
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Memory
@@ -17,11 +18,13 @@ namespace Memory
     /// <summary>
     /// Interaction logic for Highscores.xaml
     /// </summary>
-    public partial class Highscores : Window
+    public partial class Highscores : Page
     {
-        public Highscores()
+        private INavigator _navigator;
+        public Highscores(INavigator navigator)
         {
             InitializeComponent();
+            _navigator = navigator;
         }
     }
 }
