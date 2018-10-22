@@ -26,5 +26,10 @@ namespace Memory
             InitializeComponent();
             _navigator = navigator;
         }
+
+        private void terug_highscore(object sender, RoutedEventArgs e)
+        {
+            _navigator.Navigate(new Mainmenu(_navigator));
+        }
     }
 }
