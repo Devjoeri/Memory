@@ -9,15 +9,34 @@
       Title="Mainmenu">
 
     <Grid x:Name="MainMenu">
-        
+
         <Button Content="NL" Margin="10,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
         <Button Content="ENG" Margin="127,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
         <Button Content="FR" Margin="244,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
         <Button Content="SPA" Margin="361,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
-        
-        <Button Click="SinglePlayer"  Content="Single Player"  HorizontalAlignment="Left" Margin="350,156,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
-        <Button Click="Highscores"  Content="Highscores"  HorizontalAlignment="Left" Margin="350,196,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
-        <Button Content="Settings"  HorizontalAlignment="Left" Margin="350,226,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
-        <Button Content="Exit"  HorizontalAlignment="Left" Margin="350,256,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+
+        <Grid Margin="0,0,0,272" Height="168" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
+            <Grid.Background>
+                <!--Change "ImageSource" for logo location-->
+                <ImageBrush ImageSource="Images/1.png" Stretch="Uniform"/>
+            </Grid.Background>
+        </Grid>
+
+        <Grid Margin="320,123,319,207">
+            <Button Click="SinglePlayer"  Content="Single Player"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25"/>
+        </Grid>
+
+        <Grid Margin="326,153,327,176">
+            <Button Click="Highscores"  Content="Highscores"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25"/>
+        </Grid>
+
+        <Grid Margin="292,173,293,133">
+            <Button Content="Settings"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="25"/>
+        </Grid>
+
+        <Grid Margin="293,199,293,97">
+            <Button Content="Exit"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="100" Height="25" Click="exit_Game"/>
+        </Grid>
+
     </Grid>
 </Page>

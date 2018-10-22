@@ -37,5 +37,9 @@ namespace Memory
             _navigator.Navigate(new Highscores(_navigator));
         }
 
+        private void exit_Game(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
