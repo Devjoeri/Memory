@@ -69,10 +69,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Giveup.xaml.cs">
+      <DependentUpon>Giveup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winner.xaml.cs">
+      <DependentUpon>winner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="zelfdeNaam.xaml.cs">
       <DependentUpon>zelfdeNaam.xaml</DependentUpon>
     </Compile>
     <Page Include="Game.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Giveup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,6 +116,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="winner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="zelfdeNaam.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

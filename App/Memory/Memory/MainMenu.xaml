@@ -9,10 +9,12 @@
       Title="Mainmenu">
 
     <Grid x:Name="MainMenu">
+        
         <Button Content="NL" Margin="10,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
         <Button Content="ENG" Margin="127,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
         <Button Content="FR" Margin="244,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
         <Button Content="SPA" Margin="361,0,0,10" HorizontalAlignment="Left" Width="112" Height="39" VerticalAlignment="Bottom"/>
+        
         <Button Click="SinglePlayer"  Content="Single Player"  HorizontalAlignment="Left" Margin="350,156,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
         <Button Click="Highscores"  Content="Highscores"  HorizontalAlignment="Left" Margin="350,196,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
         <Button Content="Settings"  HorizontalAlignment="Left" Margin="350,226,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
