@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="Oeps" Height="240" Width="800">
     <Grid>
-        <Label Content="Speler 1 en 2 hebben de zelfde naam, verander speler 2 zijn naam" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Button Content="Okay" HorizontalAlignment="Center" Margin="0,0,0,24" Padding="16,4,16,4" VerticalAlignment="Bottom" FontSize="18"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="569*"/>
+            <ColumnDefinition Width="223*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Speler 1 en 2 hebben de zelfde naam, verander speler 2 zijn naam" HorizontalAlignment="Center" Margin="130,64,130,0" VerticalAlignment="Top" FontSize="18" Grid.ColumnSpan="2"/>
+        <Button Content="Okay" HorizontalAlignment="Center" Margin="359,0,136.162,24" Padding="16,4,16,4" VerticalAlignment="Bottom" FontSize="18"/>
     </Grid>
 </Window>

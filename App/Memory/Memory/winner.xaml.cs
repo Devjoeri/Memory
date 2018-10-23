@@ -20,11 +20,15 @@ namespace Memory
     /// </summary>
     public partial class winner : Page
     {
+        string playerName = "Placeholder PlayerName";
+
         private INavigator _navigator;
         public winner(INavigator navigator)
         {
             _navigator = navigator;
             InitializeComponent();
+
+            this.LabelWinnaar.Content = "U heeft gewonnen " + playerName;
         }
 
         private void to_Mainmenu(object sender, RoutedEventArgs e)
@@ -36,5 +40,7 @@ namespace Memory
         {
             _navigator.Navigate(new Highscores(_navigator));
         }
+
+        
     }
 }
