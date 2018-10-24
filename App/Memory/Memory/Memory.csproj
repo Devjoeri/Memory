@@ -72,17 +72,24 @@
     <Compile Include="Giveup.xaml.cs">
       <DependentUpon>Giveup.xaml</DependentUpon>
     </Compile>
-    <Compile Include="winner.xaml.cs">
-      <DependentUpon>winner.xaml</DependentUpon>
+    <Compile Include="Hervatten.xaml.cs">
+      <DependentUpon>Hervatten.xaml</DependentUpon>
     </Compile>
-    <Compile Include="zelfdeNaam.xaml.cs">
-      <DependentUpon>zelfdeNaam.xaml</DependentUpon>
+    <Compile Include="Winner.xaml.cs">
+      <DependentUpon>Winner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZelfdeNaam.xaml.cs">
+      <DependentUpon>ZelfdeNaam.xaml</DependentUpon>
     </Compile>
     <Page Include="Game.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Giveup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hervatten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,11 +123,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="winner.xaml">
+    <Page Include="Winner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="zelfdeNaam.xaml">
+    <Page Include="ZelfdeNaam.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
