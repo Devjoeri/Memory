@@ -20,10 +20,10 @@ namespace Memory
     /// </summary>
     public partial class winner : Page
     {
-        string playerName = "Placeholder PlayerName";
+        //string playerName = "Placeholder PlayerName";
 
         private INavigator _navigator;
-        public winner(INavigator navigator)
+        public winner(INavigator navigator, string playerName)
         {
             _navigator = navigator;
             InitializeComponent();
