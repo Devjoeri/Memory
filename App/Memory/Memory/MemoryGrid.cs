@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -13,15 +14,17 @@ namespace Memory
     class MemoryGrid
     {
         private Grid grid;
+        private Sidebar sidebar;
         private int rows, columns;
 
         public object RowDefinitions { get; internal set; }
 
-        public MemoryGrid(Grid grid, int colums, int rows)
+        public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows)
         {
             this.grid = grid;
             this.rows = rows;
             this.columns = colums;
+            this.sidebar = new Sidebar(sidebar);
             AddImages();
             initGrid(colums, rows);
             
@@ -46,7 +49,10 @@ namespace Memory
                 for(int column = 0; column < columns; column++)
                 {
                     Image backgroundImage = new Image();
-                    backgroundImage.Source = images[counter++];
+                    backgroundImage.Source = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                    backgroundImage.Tag = images.First();
+                    images.RemoveAt(0);
+                    backgroundImage.MouseDown += new MouseButtonEventHandler(CardClick);
                     Grid.SetColumn(backgroundImage, column);
                     Grid.SetRow(backgroundImage, row);
                     grid.Children.Add(backgroundImage);
@@ -74,6 +80,13 @@ namespace Memory
                 images[i] = value;
             }
             return images;
+        }
+        private void CardClick(object sender, MouseButtonEventArgs e)
+        {
+            Image card = (Image)sender;
+            ImageSource front = (ImageSource)card.Tag;
+            card.Source = front;
+
         }
     }
 }
