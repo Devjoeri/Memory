@@ -19,6 +19,9 @@ namespace Memory
 
         public object RowDefinitions { get; internal set; }
 
+        private int cardsTurned = 0;
+        private Image turnedCard;
+
         public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows)
         {
             this.grid = grid;
@@ -43,13 +46,14 @@ namespace Memory
         private void AddImages()
         {
             List<ImageSource> images = GetImagesList();
-            int counter = 0;
+            
             for (int row = 0; row < rows; row++)
             {
                 for(int column = 0; column < columns; column++)
                 {
                     Image backgroundImage = new Image();
-                    backgroundImage.Source = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                    //backgroundImage.Source = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                    backgroundImage.Source = images.First();
                     backgroundImage.Tag = images.First();
                     images.RemoveAt(0);
                     backgroundImage.MouseDown += new MouseButtonEventHandler(CardClick);
@@ -86,7 +90,23 @@ namespace Memory
             Image card = (Image)sender;
             ImageSource front = (ImageSource)card.Tag;
             card.Source = front;
+            cardsTurned++;
+            if (cardsTurned == 1)
+            {
+                turnedCard = card;
+            }
+            if (cardsTurned == 2)
+            {
+                if (card.Tag == turnedCard.Tag)
+                {
+                    sidebar.AddPoint(sidebar.getTurn());
+                }
+                else
+                {
+                    //turnedCard = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                }
 
+            }         
         }
     }
 }

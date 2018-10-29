@@ -11,8 +11,11 @@ namespace Memory
     class Sidebar
     {
         private Grid sidebar;
+        private string player1 = "Joeri";
+        private string player2 = "Jos";
+        private int player1Score, player2Score = 0;
 
-
+        private string turn;
         public Sidebar(Grid SideBar)
         {
             this.sidebar = SideBar;
@@ -32,6 +35,25 @@ namespace Memory
             }
 
             sidebar.ColumnDefinitions.Add(new ColumnDefinition());
+        }
+        public void AddPoint(string player)
+        {
+            if (player == player1)
+            {
+                player1Score++;
+            }
+            if (player == player2)
+            {
+                player2Score++;
+            }
+        }
+        public void setTurn()
+        {
+
+        }
+        public string getTurn()
+        {
+            return turn;
         }
         private void AddLabel()
         {
@@ -58,7 +80,7 @@ namespace Memory
         private void AddScore()
         {
             Label player1 = new Label();
-            player1.Content = "Score playername: 20";
+            player1.Content = "Score playername: "+ player1Score;
             player1.FontSize = 10;
             player1.HorizontalAlignment = HorizontalAlignment.Center;
 
@@ -67,7 +89,7 @@ namespace Memory
 
             sidebar.Children.Add(player1);
             Label player2 = new Label();
-            player2.Content = "Score playername: 22";
+            player2.Content = "Score playername: "+player2Score;
             player2.FontSize = 10;
             player2.HorizontalAlignment = HorizontalAlignment.Center;
 
