@@ -75,6 +75,7 @@
     <Compile Include="Hervatten.xaml.cs">
       <DependentUpon>Hervatten.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sidebar.cs" />
     <Compile Include="Winner.xaml.cs">
       <DependentUpon>Winner.xaml</DependentUpon>
     </Compile>
