@@ -31,7 +31,13 @@
             <Button Grid.Column="2"  Content="Moeilijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0" Padding="20,15" FontSize="18"/>
         </Grid>
 
-
-        <Button Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Padding="16,4" FontSize="18"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button  Grid.Column="0" Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="200,0,0,20" Padding="30,4" FontSize="18"/>
+            <Button Grid.Column="1" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,200,20" Padding="16,4" FontSize="18"/>
+        </Grid>
     </Grid>
 </Window>
