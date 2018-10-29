@@ -79,6 +79,9 @@
     <Compile Include="Winner.xaml.cs">
       <DependentUpon>Winner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NaamInvoeren.xaml.cs">
+      <DependentUpon>NaamInvoeren.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ZelfdeNaam.xaml.cs">
       <DependentUpon>ZelfdeNaam.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
     <Page Include="Winner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NaamInvoeren.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ZelfdeNaam.xaml">
       <Generator>MSBuild:Compile</Generator>
