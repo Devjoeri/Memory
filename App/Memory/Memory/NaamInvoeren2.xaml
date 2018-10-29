@@ -1,4 +1,4 @@
-﻿<Window x:Class="Memory.NaamInvoeren2"
+﻿<Page x:Class="Memory.NaamInvoeren2"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -40,4 +40,4 @@
             <Button Grid.Column="1" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,200,20" Padding="16,4" FontSize="18"/>
         </Grid>
     </Grid>
-</Window>
+</Page>
