@@ -15,14 +15,14 @@ namespace Memory
         private Grid grid;
         private int rows, columns;
 
+        public object RowDefinitions { get; internal set; }
+
         public MemoryGrid(Grid grid, int colums, int rows)
         {
             this.grid = grid;
             this.rows = rows;
             this.columns = colums;
-            AddLabel();
             AddImages();
-            
             initGrid(colums, rows);
             
         }
@@ -56,7 +56,7 @@ namespace Memory
         private List<ImageSource> GetImagesList()
         {
             List<ImageSource> images = new List<ImageSource>();
-            for(int i = 0; i < 16; i++)
+            for(int i = 0; i < rows*columns; i++)
             {
                 int imageNr = i % 8 + 1;
                 ImageSource source = new BitmapImage(new Uri("Images/"+imageNr+".png", UriKind.Relative));
@@ -74,17 +74,6 @@ namespace Memory
                 images[i] = value;
             }
             return images;
-        }
-
-        private void AddLabel()
-        {
-            Label title = new Label();
-            title.Content = "The game";
-            title.FontSize = 40;
-            title.HorizontalAlignment = HorizontalAlignment.Center;
-
-            Grid.SetColumn(title, 1);
-            grid.Children.Add(title);
         }
     }
 }
