@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for ZelfdeNaam.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class ZelfdeNaam : Window
     {
-        public Window1()
+        public ZelfdeNaam()
         {
         }
     }
