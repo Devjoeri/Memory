@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace Memory
 {
@@ -16,6 +17,9 @@ namespace Memory
         private int player1Score, player2Score = 0;
 
         private string turn;
+
+        private Label lplayer1 = new Label();
+        private Label lplayer2 = new Label();
         public Sidebar(Grid SideBar)
         {
             this.sidebar = SideBar;
@@ -44,11 +48,13 @@ namespace Memory
             if (player == player1)
             {
                 player1Score++;
-                AddScore();
+                //AddScore();
+                lplayer1.Dispatcher.Invoke(new Action(() => { lplayer1.Content = "Score " + this.player1 + ": " + this.player1Score; }));
             }
             if (player == player2)
             {
                 player2Score++;
+                lplayer2.Dispatcher.Invoke(new Action(() => { lplayer2.Content = "Score " + this.player2 + ": " + this.player2Score; }));
             }
         }
         public void setTurn()
@@ -83,26 +89,30 @@ namespace Memory
         }
         private void AddScore()
         {
-            Label player1 = new Label();
-            player1.Content = "Score "+ this.player1 + ": "+ this.player1Score;
-            player1.FontSize = 10;
-            player1.HorizontalAlignment = HorizontalAlignment.Center;
+            
+            lplayer1.Content = "Score "+ this.player1 + ": "+ this.player1Score;
+            lplayer1.FontSize = 10;
+            lplayer1.HorizontalAlignment = HorizontalAlignment.Center;
 
-            Grid.SetColumn(player1, 0);
-            Grid.SetRow(player1, 6);
+            Grid.SetColumn(lplayer1, 0);
+            Grid.SetRow(lplayer1, 6);
+            
 
-            sidebar.Children.Add(player1);
-            Label player2 = new Label();
+            sidebar.Children.Add(lplayer1);
+
             String content = "Score " + this.player2 + ": " + this.player2Score;
-            player2.Content = content;
-            player2.FontSize = 10;
-            player2.HorizontalAlignment = HorizontalAlignment.Center;
+            lplayer2.Content = content;
+            lplayer2.FontSize = 10;
+            lplayer2.HorizontalAlignment = HorizontalAlignment.Center;
 
-            Grid.SetColumn(player2, 0);
-            Grid.SetRow(player2, 7);
+            Grid.SetColumn(lplayer2, 0);
+            Grid.SetRow(lplayer2, 7);
 
-            sidebar.Children.Add(player2);
+            sidebar.Children.Add(lplayer2);
+            
+            
         }
+        
         private void AddTurn()
         {
             Label turn = new Label();
