@@ -1,0 +1,107 @@
+{
+  "size": 4,
+  "player1": [{ "naam": "Joeri", "score": 2}],
+  "player2": [{ "naam": "Jos", "score": 1}],
+  "turn": "player1",
+  "cards": [
+    {
+      "row": 0,
+      "column": 0,
+      "image": 1,
+      "turned" : true
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "image": 1,
+      "turned": true
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "image": 2,
+      "turned": true
+    },
+    {
+      "row": 0,
+      "column": 3,
+      "image": 2,
+      "turned": true
+    },
+
+    {
+      "row": 1,
+      "column": 0,
+      "image": 3,
+      "turned": true
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "image": 3,
+      "turned": true
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "image": 4,
+      "turned": true
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "image": 4,
+      "turned": false
+    },
+
+    {
+      "row": 2,
+      "column": 0,
+      "image": 5,
+      "turned": true
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "image": 5,
+      "turned": false
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "image": 6,
+      "turned": false
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "image": 6,
+      "turned": false
+    },
+
+    {
+      "row": 3,
+      "column": 0,
+      "image": 7,
+      "turned": true
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "image": 7,
+      "turned": false
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "image": 8,
+      "turned": true
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "image": 8,
+      "turned": true
+    }
+  ]
+}
