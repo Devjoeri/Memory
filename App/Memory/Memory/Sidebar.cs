@@ -9,6 +9,13 @@ using System.Windows.Threading;
 
 namespace Memory
 {
+    /// <summary>
+    /// De aparte class voor de sidebar.
+    /// Hier initializeren we de side bar, en geven we mee:
+    /// De speler aanzet,
+    /// De namen van speler 1 en 2,
+    /// en de knoppen "opgeven", "help" en "opslaan"
+    /// </summary>
     class Sidebar
     {
         private Grid sidebar;
@@ -43,6 +50,11 @@ namespace Memory
 
             sidebar.ColumnDefinitions.Add(new ColumnDefinition());
         }
+
+        /// <summary>
+        /// Hier voegen we de punten toe aan de speler die aanzet is.
+        /// </summary>
+        /// <param name="player"></param>
         public void AddPoint(string player)
         {
             if (player == player1)
@@ -57,14 +69,25 @@ namespace Memory
                 lplayer2.Dispatcher.Invoke(new Action(() => { lplayer2.Content = "Score " + this.player2 + ": " + this.player2Score; }));
             }
         }
+        /// <summary>
+        /// Hier setten we de turn
+        /// </summary>
         public void setTurn()
         {
 
         }
+        /// <summary>
+        /// Hier returne wij de turn, dus wie aan zet is
+        /// </summary>
+        /// <returns></returns>
         public string getTurn()
         {
             return turn;
         }
+
+        /// <summary>
+        /// Hier voegen we de label en de buttons toe aan de sidebar
+        /// </summary>
         private void AddLabel()
         {
             Label title = new Label();
@@ -76,6 +99,7 @@ namespace Memory
             sidebar.RowDefinitions[0].Height = new GridLength(100);
             sidebar.Children.Add(title);
         }
+
         private void AddButton(string buttonName, int pos)
         {
             Button button = new Button();
@@ -87,6 +111,9 @@ namespace Memory
             
             sidebar.Children.Add(button);
         }
+        /// <summary>
+        /// Hier voegen we de tekst toe die tezien is in de sidebar, die aangeeft wie hoeveel punten heeft.
+        /// </summary>
         private void AddScore()
         {
             
@@ -113,6 +140,9 @@ namespace Memory
             
         }
         
+        /// <summary>
+        /// Hier voegen we de label "aan zet" toe om aan tegeven wie zijn beurt het is.
+        /// </summary>
         private void AddTurn()
         {
             Label turn = new Label();

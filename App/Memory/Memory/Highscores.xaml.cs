@@ -16,7 +16,8 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for Highscores.xaml
+    /// Hier halen we scores uit een JSON bestand, en plaatsen deze op de juiste plek.
+    /// Om zo te laten zien wie er de meeste punten heeft behaald.
     /// </summary>
     public partial class Highscores : Page
     {
@@ -27,6 +28,11 @@ namespace Memory
             _navigator = navigator;
         }
 
+        /// <summary>
+        /// Button event om terug te gaan naar de homescreen/main menu screen.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void terug_highscore(object sender, RoutedEventArgs e)
         {
             _navigator.Navigate(new Mainmenu(_navigator));

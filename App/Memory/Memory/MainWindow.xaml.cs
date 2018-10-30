@@ -16,7 +16,8 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Hier plaatsen we alle pages om te displaye.
+    /// dit gebeurd allemaal in een frame.
     /// </summary>
     public partial class MainWindow : INavigator
     {

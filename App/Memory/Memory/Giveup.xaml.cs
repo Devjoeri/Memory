@@ -16,7 +16,8 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for Giveup.xaml
+    /// Deze class bevat de button events voor het giveup pop-up,
+    /// die verantwoordelijk zijn om of de game te stoppen en opteslaan, of terug te gaan naar de game
     /// </summary>
     public partial class Giveup : Page
     {

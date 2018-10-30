@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// hier pakken we de naam van de eerste speler.
     /// </summary>
     public partial class Window1 : Window
     {
