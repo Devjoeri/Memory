@@ -68,7 +68,7 @@ namespace Memory
             List<ImageSource> images = new List<ImageSource>();
             for(int i = 0; i < rows*columns; i++)
             {
-                int imageNr = i % 8 + 1;
+                int imageNr = i % 8 + 1; //De 8 is hardcoded, moet nog een variabele worden
                 ImageSource source = new BitmapImage(new Uri("Images/"+imageNr+".png", UriKind.Relative));
                 images.Add(source);
             }
