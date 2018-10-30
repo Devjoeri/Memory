@@ -2,7 +2,7 @@
   "size": 4,
   "player1": [{ "naam": "Joeri", "score": 2}],
   "player2": [{ "naam": "Jos", "score": 1}],
-  "turn": "player1",
+  "turn": 1,
   "cards": [
     {
       "row": 0,

@@ -81,6 +81,7 @@ namespace Memory
             Button button = new Button();
             button.Content = buttonName;
             button.HorizontalAlignment = HorizontalAlignment.Center;
+            button.Click += SaveClick;
 
             Grid.SetColumn(button, 0);
             Grid.SetRow(button, pos);
@@ -133,6 +134,12 @@ namespace Memory
             Grid.SetRow(player, 9);
 
             sidebar.Children.Add(player);
+        }
+   
+        private void SaveClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Save");
+            new Save(player1, player1Score, player2, player2Score,getTurn(),4);
         }
     }
 }
