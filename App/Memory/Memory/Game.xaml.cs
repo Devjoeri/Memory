@@ -16,7 +16,8 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for Game.xaml
+    /// In deze class initializeren we de game grid,
+    /// dit gebeurt in aparte classes
     /// </summary>
     public partial class Game : Page
     {

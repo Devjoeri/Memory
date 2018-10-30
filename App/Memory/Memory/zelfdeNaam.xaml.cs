@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for ZelfdeNaam.xaml
+    /// Pop-up die wordt gedisplayed als speler 2 de zelde naam heeft als speler 1
     /// </summary>
     public partial class ZelfdeNaam : Window
     {

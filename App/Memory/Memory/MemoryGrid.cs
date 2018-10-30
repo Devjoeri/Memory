@@ -11,6 +11,11 @@ using System.Windows.Media.Imaging;
 
 namespace Memory
 {
+    /// <summary>
+    /// Hier maken we en setten we alle images voor het memory spel
+    /// plaatsen we de kaarten gerandomized en omgedraait.
+    /// De sidebar is apart gezet in een class
+    /// </summary>
     class MemoryGrid
     {
         private Grid grid;
@@ -33,6 +38,11 @@ namespace Memory
             initGrid(colums, rows);
             
         }
+        /// <summary>
+        /// Hier maken we de rows en columns aan voor de game grid
+        /// </summary>
+        /// <param name="colums"></param>
+        /// <param name="rows"></param>
         private void initGrid(int colums, int rows)
         {
             for(int i = 0; i < rows; i++)
@@ -44,6 +54,10 @@ namespace Memory
                 grid.ColumnDefinitions.Add(new ColumnDefinition());
             }
         }
+
+        /// <summary>
+        /// Hier plaatsen we alle background images to op de plek voor de kaarten, en geven we ze een tag mee
+        /// </summary>
         private void AddImages()
         {
             List<ImageSource> images = GetImagesList();
@@ -64,6 +78,10 @@ namespace Memory
                 }
             }
         }
+        /// <summary>
+        /// Hier randomize we de plaatjes voor de kaarten als je ze omdraait
+        /// </summary>
+        /// <returns></returns>
         private List<ImageSource> GetImagesList()
         {
             List<ImageSource> images = new List<ImageSource>();
@@ -86,6 +104,15 @@ namespace Memory
             }
             return images;
         }
+
+        /// <summary>
+        /// Een event handler die af gaat als iemand op een kaart klikt, daar na slaan we de eerste op,
+        /// en gaan we kijken of de tweede keuze overeen komt met de eerste.
+        /// Zowel, worden er punten toegevoegt aan de speler die aan de beurd is.
+        /// Zo niet, dan draaien we de kaarten weer om en is de volgende aan de beurt.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
             Image card = (Image)sender;

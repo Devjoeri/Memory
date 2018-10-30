@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for winner.xaml
+    /// Hier de pop-up voor de winnaar, en de redirections voor de knoppen "Mainmenu"  en "Highscores"
     /// </summary>
     public partial class winner : Page
     {

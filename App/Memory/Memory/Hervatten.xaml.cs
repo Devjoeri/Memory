@@ -15,7 +15,8 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Interaction logic for Hervatten.xaml
+    /// In deze class hervatten we een game die we hebben opgeslagen van een eerder potje.
+    /// Keuze tussen ja en nee.
     /// </summary>
     public partial class Hervatten : Window
     {
