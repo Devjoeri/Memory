@@ -21,6 +21,7 @@ namespace Memory
 
         private int cardsTurned = 0;
         private Image turnedCard;
+        private object pic;
 
         public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows)
         {
@@ -52,8 +53,8 @@ namespace Memory
                 for(int column = 0; column < columns; column++)
                 {
                     Image backgroundImage = new Image();
-                    backgroundImage.Source = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
-                    //backgroundImage.Source = images.First();
+                    //backgroundImage.Source = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                    backgroundImage.Source = images.First();
                     backgroundImage.Tag = images.First();
                     images.RemoveAt(0);
                     backgroundImage.MouseDown += new MouseButtonEventHandler(CardClick);
@@ -97,11 +98,12 @@ namespace Memory
             }
             if (cardsTurned == 2)
             {
-                //if (true)
-                //{
+                if (card.Uid == turnedCard.Uid)
+                {
+                    
                     string player = sidebar.getTurn();
                     sidebar.AddPoint(player);
-                //}
+                }
                 //else
                 //{
                     //turnedCard = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));

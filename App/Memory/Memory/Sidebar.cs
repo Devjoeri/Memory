@@ -44,6 +44,7 @@ namespace Memory
             if (player == player1)
             {
                 player1Score++;
+                AddScore();
             }
             if (player == player2)
             {
@@ -83,7 +84,7 @@ namespace Memory
         private void AddScore()
         {
             Label player1 = new Label();
-            player1.Content = "Score "+ this.player1 + ": "+ player1Score;
+            player1.Content = "Score "+ this.player1 + ": "+ this.player1Score;
             player1.FontSize = 10;
             player1.HorizontalAlignment = HorizontalAlignment.Center;
 
@@ -92,7 +93,7 @@ namespace Memory
 
             sidebar.Children.Add(player1);
             Label player2 = new Label();
-            String content = "Score " + this.player2 + ": " + player2Score;
+            String content = "Score " + this.player2 + ": " + this.player2Score;
             player2.Content = content;
             player2.FontSize = 10;
             player2.HorizontalAlignment = HorizontalAlignment.Center;
