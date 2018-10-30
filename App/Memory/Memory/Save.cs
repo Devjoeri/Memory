@@ -14,27 +14,54 @@ namespace Memory
     {
 
         //info
-        public int _size;
-        public string _player1;
-        public int _score1;
-        public string _player2;
-        public int _score2;
-        public string _turn;
+        public int size;
+        public string player1;
+        public int score1;
+        public string player2;
+        public int score2;
+        public string turn;
+        public List<card> kaarten;
+
         //grid info
         //public int row, column, image;
-            
+        public class card
+        {
+            public int row, column, image;
+            public bool turned;
+
+            public card(int row, int column, int image, bool turned)
+            {
+                this.row = row;
+                this.column = column;
+                this.image = image;
+                this.turned = turned;
+            }
+
+        }; 
 
         public Save(string player1, int score1, string player2, int score2, string turn,int size)
         {
             JavaScriptSerializer ser = new JavaScriptSerializer();
 
             //Set Save Data
-            _player1 = player1;
-            _player2 = player2;
-            _score1 = score1;
-            _score2 = score2;
-            _turn = turn;
-            _size = size;
+            this.player1 = player1;
+            this.player2 = player2;
+            this.score1 = score1;
+            this.score2 = score2;
+            this.turn = turn;
+            this.size = size;
+            kaarten = new List<card>();
+
+            //Plaatje op welke plek
+            for (int row = 0; row < size; row++)
+            {
+                for (int column = 0; column < size; column++)
+                {
+                    //int image = getCardImage(row,column);
+                    int image = 0;
+                    kaarten.Add(new card(row,column,image,true));
+                }
+            }
 
             string saveJson = JsonConvert.SerializeObject(this);
             File.WriteAllText("Savetest.json", saveJson);
