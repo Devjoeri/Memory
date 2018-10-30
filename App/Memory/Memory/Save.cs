@@ -21,6 +21,7 @@ namespace Memory
         public int score2;
         public string turn;
         public List<card> kaarten;
+        List<int> imageList;
 
         //grid info
         //public int row, column, image;

@@ -28,6 +28,8 @@ namespace Memory
         private Image turnedCard;
         private object pic;
 
+        public List<int> imagesList = new List<int>(); //Lijst met images zodat deze mee kan gegeven worden aan de save class
+
         public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows)
         {
             this.grid = grid;
@@ -90,6 +92,9 @@ namespace Memory
                 int imageNr = i % 8 + 1; //De 8 is hardcoded, moet nog een variabele worden
                 ImageSource source = new BitmapImage(new Uri("Images/"+imageNr+".png", UriKind.Relative));
                 images.Add(source);
+
+                //Voeg Imagenr toe aan de lijst voor de save
+                imagesList.Add(imageNr);
             }
             Random random = new Random();
             int n = images.Count;
@@ -138,5 +143,6 @@ namespace Memory
 
             }         
         }
+
     }
 }
