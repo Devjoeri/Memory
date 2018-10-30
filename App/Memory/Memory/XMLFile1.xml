@@ -32,9 +32,17 @@
             InitializeComponent
             </summary>
         </member>
-        <member name="T:Memory.Window1">
+        <member name="T:Memory.NaamInvoeren">
             <summary>
             hier pakken we de naam van de eerste speler.
+            </summary>
+            <summary>
+            NaamInvoeren
+            </summary>
+        </member>
+        <member name="M:Memory.NaamInvoeren.InitializeComponent">
+            <summary>
+            InitializeComponent
             </summary>
         </member>
         <member name="T:Memory.NaamInvoeren3">
@@ -266,16 +274,6 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="T:Memory.NaamInvoeren">
-            <summary>
-            NaamInvoeren
-            </summary>
-        </member>
-        <member name="M:Memory.NaamInvoeren.InitializeComponent">
-            <summary>
-            InitializeComponent
             </summary>
         </member>
         <member name="T:Memory.zelfdeNaam">

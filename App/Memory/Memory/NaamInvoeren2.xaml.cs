@@ -19,7 +19,7 @@ namespace Memory
     /// Hier pakken we de naam voor de tweede speler, en gaan we kijken of ze overeen komen met speler een.
     /// Als dit waar is, moet speler 2 een andere naam invullen
     /// </summary>
-    public partial class NaamInvoeren3 : Page
+    public partial class NaamInvoeren3 : Window
     {
         public NaamInvoeren3()
         {

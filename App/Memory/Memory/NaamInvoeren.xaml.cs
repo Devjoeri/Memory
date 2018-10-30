@@ -17,10 +17,24 @@ namespace Memory
     /// <summary>
     /// hier pakken we de naam van de eerste speler.
     /// </summary>
-    public partial class Window1 : Window
+    public partial class NaamInvoeren : Window
     {
-        public Window1()
+        private string player1;
+        private int gridsize = 4;
+        public NaamInvoeren()
         {
+            InitializeComponent();
+        }
+
+        private void Next(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(nameInput.Text))
+            {
+                this.player1 = nameInput.Text;
+                NaamInvoeren3 setupDialog = new NaamInvoeren3();
+                setupDialog.ShowDialog();
+            }
+            
         }
     }
 }
