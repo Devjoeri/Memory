@@ -1,0 +1,21 @@
+Must have:
+1. Als speler wil ik een dynamisch veld want zo kan ik de moeitegraad aanpasses.
+2. Als speler wil ik een pop up om de winnaar te laten zien zodat ik weet wie gewonnen heeft.
+3. Als speler wil ik highscore hebben zodat ik kan zien wie het beste spel heeft gespeeld.
+4. Als speler wil ik een main menu zodat ik een interface krijg vooraf het spel.
+5. Als speler wil ik een pop up voor het opslaan zodat ik kan bevestigen of ik echt wil opslaan en wil stoppen.
+
+Should Have:
+6. Als speler wil ik een kaart design zodat de kaarten voor en achterkant niet het zelfde eruit zien.
+7. Als speler wil ik dat het spel een mooi en clean design heeft, zodat het makkelijk is om naar te kijken en netjes eruit ziet
+
+Could Have:
+7. Als speler wil ik animaties zodat het spel levendiger wordt
+8. Als speler wil ik geluid feedback hebben zodat ik weet wat er gebeurd
+9. Als speler wil ik meer thema's zodat het spel niet één saaie look heeft
+10. als speler zou ik easter eggs willen zodat ik ze kan zoeken
+
+Won't have:
+11. Als speler wil ik localisatie zodat de game zelf de taal aanpast naar hoe het systeem staat ingesteld.
+12. Als speler wil ik online multiplayer zodat ik met mijn maat 20km verderop kan spelen.
+13. Als speler wil ik dat de resultaten geprint worden zodat ik mijn goede score aan andere mensen kan laten zien.

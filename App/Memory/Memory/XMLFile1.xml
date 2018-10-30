@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Memory</name>
+    </assembly>
+    <members>
+        <member name="T:Memory.Giveup">
+            <summary>
+            Deze class bevat de button events voor het giveup pop-up,
+            die verantwoordelijk zijn om of de game te stoppen en opteslaan, of terug te gaan naar de game
+            </summary>
+            <summary>
+            Giveup
+            </summary>
+        </member>
+        <member name="M:Memory.Giveup.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.Hervatten">
+            <summary>
+            In deze class hervatten we een game die we hebben opgeslagen van een eerder potje.
+            Keuze tussen ja en nee.
+            </summary>
+            <summary>
+            Hervatten
+            </summary>
+        </member>
+        <member name="M:Memory.Hervatten.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.Window1">
+            <summary>
+            hier pakken we de naam van de eerste speler.
+            </summary>
+        </member>
+        <member name="T:Memory.NaamInvoeren3">
+            <summary>
+            Hier pakken we de naam voor de tweede speler, en gaan we kijken of ze overeen komen met speler een.
+            Als dit waar is, moet speler 2 een andere naam invullen
+            </summary>
+            <summary>
+            NaamInvoeren3
+            </summary>
+        </member>
+        <member name="M:Memory.NaamInvoeren3.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.Sidebar">
+            <summary>
+            De aparte class voor de sidebar.
+            Hier initializeren we de side bar, en geven we mee:
+            De speler aanzet,
+            De namen van speler 1 en 2,
+            en de knoppen "opgeven", "help" en "opslaan"
+            </summary>
+        </member>
+        <member name="M:Memory.Sidebar.AddPoint(System.String)">
+            <summary>
+            Hier voegen we de punten toe aan de speler die aanzet is.
+            </summary>
+            <param name="player"></param>
+        </member>
+        <member name="M:Memory.Sidebar.setTurn">
+            <summary>
+            Hier setten we de turn
+            </summary>
+        </member>
+        <member name="M:Memory.Sidebar.getTurn">
+            <summary>
+            Hier returne wij de turn, dus wie aan zet is
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Memory.Sidebar.AddLabel">
+            <summary>
+            Hier voegen we de label en de buttons toe aan de sidebar
+            </summary>
+        </member>
+        <member name="M:Memory.Sidebar.AddScore">
+            <summary>
+            Hier voegen we de tekst toe die tezien is in de sidebar, die aangeeft wie hoeveel punten heeft.
+            </summary>
+        </member>
+        <member name="M:Memory.Sidebar.AddTurn">
+            <summary>
+            Hier voegen we de label "aan zet" toe om aan tegeven wie zijn beurt het is.
+            </summary>
+        </member>
+        <member name="T:Memory.winner">
+            <summary>
+            Hier de pop-up voor de winnaar, en de redirections voor de knoppen "Mainmenu"  en "Highscores"
+            </summary>
+            <summary>
+            winner
+            </summary>
+        </member>
+        <member name="M:Memory.winner.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.ZelfdeNaam">
+            <summary>
+            Pop-up die wordt gedisplayed als speler 2 de zelde naam heeft als speler 1
+            </summary>
+        </member>
+        <member name="T:Memory.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Memory.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Memory.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Memory.Game">
+            <summary>
+            In deze class initializeren we de game grid,
+            dit gebeurt in aparte classes
+            </summary>
+            <summary>
+            Game
+            </summary>
+        </member>
+        <member name="M:Memory.Game.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.Highscores">
+            <summary>
+            Hier halen we scores uit een JSON bestand, en plaatsen deze op de juiste plek.
+            Om zo te laten zien wie er de meeste punten heeft behaald.
+            </summary>
+            <summary>
+            Highscores
+            </summary>
+        </member>
+        <member name="M:Memory.Highscores.terug_highscore(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Button event om terug te gaan naar de homescreen/main menu screen.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Memory.Highscores.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.INavigator">
+            <summary>
+            Deze class wordt gebruikt om te navigeren tussen schermen in de main screen
+            die te zien is tijdens het opstarten van de game.
+            </summary>
+        </member>
+        <member name="T:Memory.Mainmenu">
+            <summary>
+            Alle main menu knoppen en events om door te navigeren naar een andere WPF page.
+            </summary>
+            <summary>
+            Mainmenu
+            </summary>
+        </member>
+        <member name="M:Memory.Mainmenu.SinglePlayer(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Starts singeplayer game
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Memory.Mainmenu.Highscores(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Stuurt de gebruiker door naar de highscore page
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Memory.Mainmenu.exit_Game(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Exits het spel met exit code "0"
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Memory.Mainmenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.MainWindow">
+            <summary>
+            Hier plaatsen we alle pages om te displaye.
+            dit gebeurd allemaal in een frame.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Memory.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.MemoryGrid">
+            <summary>
+            Hier maken we en setten we alle images voor het memory spel
+            plaatsen we de kaarten gerandomized en omgedraait.
+            De sidebar is apart gezet in een class
+            </summary>
+        </member>
+        <member name="M:Memory.MemoryGrid.initGrid(System.Int32,System.Int32)">
+            <summary>
+            Hier maken we de rows en columns aan voor de game grid
+            </summary>
+            <param name="colums"></param>
+            <param name="rows"></param>
+        </member>
+        <member name="M:Memory.MemoryGrid.AddImages">
+            <summary>
+            Hier plaatsen we alle background images to op de plek voor de kaarten, en geven we ze een tag mee
+            </summary>
+        </member>
+        <member name="M:Memory.MemoryGrid.GetImagesList">
+            <summary>
+            Hier randomize we de plaatjes voor de kaarten als je ze omdraait
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Memory.MemoryGrid.CardClick(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Een event handler die af gaat als iemand op een kaart klikt, daar na slaan we de eerste op,
+            en gaan we kijken of de tweede keuze overeen komt met de eerste.
+            Zowel, worden er punten toegevoegt aan de speler die aan de beurd is.
+            Zo niet, dan draaien we de kaarten weer om en is de volgende aan de beurt.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Memory.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Memory.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Memory.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Memory.NaamInvoeren">
+            <summary>
+            NaamInvoeren
+            </summary>
+        </member>
+        <member name="M:Memory.NaamInvoeren.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.zelfdeNaam">
+            <summary>
+            zelfdeNaam
+            </summary>
+        </member>
+        <member name="M:Memory.zelfdeNaam.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>
