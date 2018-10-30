@@ -52,8 +52,8 @@ namespace Memory
                 for(int column = 0; column < columns; column++)
                 {
                     Image backgroundImage = new Image();
-                    //backgroundImage.Source = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
-                    backgroundImage.Source = images.First();
+                    backgroundImage.Source = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                    //backgroundImage.Source = images.First();
                     backgroundImage.Tag = images.First();
                     images.RemoveAt(0);
                     backgroundImage.MouseDown += new MouseButtonEventHandler(CardClick);
@@ -97,14 +97,15 @@ namespace Memory
             }
             if (cardsTurned == 2)
             {
-                if (card.Tag == turnedCard.Tag)
-                {
-                    sidebar.AddPoint(sidebar.getTurn());
-                }
-                else
-                {
+                //if (true)
+                //{
+                    string player = sidebar.getTurn();
+                    sidebar.AddPoint(player);
+                //}
+                //else
+                //{
                     //turnedCard = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
-                }
+                //}
 
             }         
         }
