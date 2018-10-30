@@ -25,10 +25,6 @@ namespace Memory
         {
             _navigator = navigator;
             InitializeComponent();
-
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"c:\mywavfile.wav");
-            player.Play();
-
         }
 
         private void SinglePlayer(object sender, RoutedEventArgs e)

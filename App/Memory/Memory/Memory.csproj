@@ -196,11 +196,5 @@
   <ItemGroup>
     <Resource Include="Images\front.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Hallo.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Highscores\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

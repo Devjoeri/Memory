@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
 
 namespace Memory
 {
@@ -26,27 +25,11 @@ namespace Memory
         {
             InitializeComponent();
             _navigator = navigator;
-            loadHighscore("Hallo");
         }
 
         private void terug_highscore(object sender, RoutedEventArgs e)
         {
             _navigator.Navigate(new Mainmenu(_navigator));
-        }
-
-        private void loadHighscore(string fileName)
-        {
-
-            try
-            {
-
-                String json = File.ReadAllText(new Uri("Images/" + fileName + ".txt", UriKind.Relative).ToString());
-                Console.WriteLine(json);
-            }
-            catch (Exception e)
-            {
-
-            }
         }
     }
 }
