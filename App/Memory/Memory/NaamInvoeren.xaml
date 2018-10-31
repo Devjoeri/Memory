@@ -13,6 +13,7 @@
             <Label Content="NaamInvoeren" HorizontalAlignment="Center" Margin="268,10,251,0" VerticalAlignment="Top" FontSize="38"/>
 
             <!--TextBox Speler 1-->
+
             <Grid Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="245*"/>
@@ -31,7 +32,7 @@
                 <Button Grid.Column="0"  Content="4x4" VerticalAlignment="Center" Margin="240,127,100,86" Padding="10,15" FontSize="18"/>
                 <Button Grid.Column="1"  Content="6x6" VerticalAlignment="Center" Margin="100,127,240,86" Padding="10,15" FontSize="18"/>
             </Grid>
-
+             
 
             <Button Click="Next" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30" Padding="16,4" FontSize="18"/>
         </Grid>

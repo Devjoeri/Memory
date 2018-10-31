@@ -22,7 +22,7 @@ namespace Memory
         public NaamInvoerenWindow()
         {
             InitializeComponent();
-            Navigate(new NaamInvoeren(this));
+            Navigate(new NaamInvoeren(this,this));
         }
         public void Navigate(Page p)
         {

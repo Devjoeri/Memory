@@ -39,8 +39,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button  Grid.Column="0" Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="200,0,0,20" Padding="30,4" FontSize="18"/>
-                <Button Grid.Column="1" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,200,20" Padding="16,4" FontSize="18"/>
+                <Button Click="Back" Grid.Column="0" Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="200,0,0,20" Padding="30,4" FontSize="18"/>
+                <Button Click="Next" Grid.Column="1" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,200,20" Padding="16,4" FontSize="18"/>
             </Grid>
         </Grid>
     </Grid>

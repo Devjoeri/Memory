@@ -20,9 +20,31 @@ namespace Memory
     /// </summary>
     public partial class NaamInvoer2 : Page
     {
-        public NaamInvoer2()
+        private string player2;
+        private int difficulty;
+        INavigator _navigator;
+        NaamInvoerenWindow _window;
+        public NaamInvoer2(NaamInvoerenWindow window, INavigator navigator)
         {
             InitializeComponent();
+            _window = window;
+            _navigator = navigator;
+        }
+
+        public void Next(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(naamSpeler2.Text))
+            {
+                this.player2 = naamSpeler2.Text;
+                //Ga terug naar main window
+                _window.Close();
+            }
+
+        }
+
+        public void Back(object sender, RoutedEventArgs e)
+        {
+            _navigator.Navigate(new NaamInvoeren(_navigator, _window));
         }
     }
 }

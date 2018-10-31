@@ -21,16 +21,26 @@ namespace Memory
     public partial class NaamInvoeren : Page
     {
         private INavigator _navigator;
-        public NaamInvoeren(INavigator navigator)
+        private string player1;
+        private int gridsize = 4;
+        NaamInvoerenWindow _window;
+
+        public NaamInvoeren(INavigator navigator, NaamInvoerenWindow window)
         {
             InitializeComponent();
             _navigator = navigator;
-            
+            _window = window;
         }
 
         public void Next(object sender, RoutedEventArgs e)
         {
-            _navigator.Navigate(new NaamInvoer2());
+            if (!string.IsNullOrWhiteSpace(nameInput.Text))
+            {
+                this.player1 = nameInput.Text;
+                _navigator.Navigate(new NaamInvoer2(_window, _navigator));
+            }
+            
         }
+
     }
 }
