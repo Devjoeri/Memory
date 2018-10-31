@@ -15,6 +15,7 @@ namespace Memory
 
         public Highscore()
         {
+            _HighScores = getScores();
         }
 
         /// <summary>

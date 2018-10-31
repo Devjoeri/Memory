@@ -28,8 +28,11 @@ namespace Memory
         private Label lplayer1 = new Label();
         private Label lplayer2 = new Label();
         private Label tplayer = new Label();
+
+        Highscore _highscore;
         public Sidebar(Grid SideBar, string[] setup)
         {
+            _highscore = new Highscore();
             this.sidebar = SideBar;
             this.player1 = setup[1];
             this.player2 = setup[2];
@@ -178,6 +181,8 @@ namespace Memory
         {
             Console.WriteLine("Save");
             new Save(player1, player1Score, player2, player2Score,getTurn(),4);
+            _highscore.addScore(new PlayerScore(player1, player1Score));
+            _highscore.addScore(new PlayerScore(player2, player2Score));
         }
     }
 }

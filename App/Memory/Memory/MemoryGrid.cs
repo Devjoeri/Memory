@@ -28,7 +28,9 @@ namespace Memory
         private Card turnedCard;
         private object pic;
 
-        public List<int> imagesList = new List<int>(); //Lijst met images zodat deze mee kan gegeven worden aan de save class
+        Highscore _highscore;
+
+
 
         public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows, string[] setup)
         {
@@ -38,7 +40,6 @@ namespace Memory
             this.sidebar = new Sidebar(sidebar, setup);
             AddImages();
             initGrid(colums, rows);
-            
         }
         /// <summary>
         /// Hier maken we de rows en columns aan voor de game grid
@@ -92,9 +93,6 @@ namespace Memory
                 int imageNr = i % 8 + 1; //De 8 is hardcoded, moet nog een variabele worden
                 ImageSource source = new BitmapImage(new Uri("Images/"+imageNr+".png", UriKind.Relative));
                 images.Add(new Card(source, imageNr));
-
-                //Voeg Imagenr toe aan de lijst voor de save
-                imagesList.Add(imageNr);
             }
             Random random = new Random();
             int n = images.Count;

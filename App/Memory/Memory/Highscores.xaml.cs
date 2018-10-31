@@ -38,9 +38,9 @@ namespace Memory
             _highscore = new Highscore();
             
             //test code adden van score
-            _highscore.addScore(new PlayerScore("Joeri", 10));
-            _highscore.addScore(new PlayerScore("Jador",130));
-            _highscore.addScore(new PlayerScore("Wouter", 160));
+            //_highscore.addScore(new PlayerScore("Joeri", 10));
+            //_highscore.addScore(new PlayerScore("Jador",130));
+            //_highscore.addScore(new PlayerScore("Wouter", 160));
 
             DisplayHighscores(_highscore.getScores());
         }

@@ -44,6 +44,19 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Memory.Highscore.addScore(Memory.PlayerScore)">
+            <summary>
+            Deze functie geef je een player object mee en voegt deze toe aan de Highscore list
+            </summary>
+            <param name="score"></param>
+        </member>
+        <member name="M:Memory.Highscore.placeToId(System.Collections.Generic.List{Memory.PlayerScore})">
+            <summary>
+            Deze functie geeft de 'Id' variabele de id van de plaats in de list 
+            </summary>
+            <param name="highscores"></param>
+            <returns></returns>
+        </member>
         <member name="M:Memory.JsonTools.writeToJson(System.Object,System.String)">
             <summary>
             Deze functie schrijft het megegeven object naar een json bestand met de megegeven naam
