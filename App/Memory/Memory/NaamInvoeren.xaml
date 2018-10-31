@@ -35,7 +35,7 @@
             <Button Content="6x6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="97,157,517,102" Padding="10,15" FontSize="18" Width="166" Height="61"/>
 
             <Button Click="Next" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="340,257,320,27" Padding="16,4" FontSize="18" Height="36" Width="120"/>
-            <Label x:Name="noNameLabel" HorizontalAlignment="Center" Margin="302,157,233,102" VerticalAlignment="Center" Width="245" FontSize="16" Height="61"/>
+            <Label x:Name="noNameLabel" HorizontalAlignment="Center" Margin="282,157,254,102" VerticalAlignment="Center" Width="244" FontSize="16" Height="61"/>
         </Grid>
     </Grid>
 
