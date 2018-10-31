@@ -57,7 +57,7 @@ namespace Memory
         {
             Scores = new List<PlayerScore>();
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 9; i++)
             { 
                 Scores.Add(new PlayerScore(i,"Jador", 120));
             }
@@ -80,15 +80,15 @@ namespace Memory
                 switch(score.Id){
                     case 0:
                         naam0.Content = score.playerName;
-                        score0.Content = score.Score;
+                        score0.Content = "Score: " + score.Score;
                         break;
                     case 1:
                         naam1.Content = score.playerName;
-                        score1.Content = score.Score;
+                        score1.Content = "Score: " + score.Score;
                         break;
                     case 2:
                         naam2.Content = score.playerName;
-                        score2.Content = score.Score;
+                        score2.Content = "Score: " + score.Score;
                         break;
                     case 3:
                         naam3.Content = score.playerName;
@@ -101,6 +101,18 @@ namespace Memory
                     case 5:
                         naam5.Content = score.playerName;
                         score5.Content = score.Score;
+                        break;
+                    case 6:
+                        naam6.Content = score.playerName;
+                        score6.Content = score.Score;
+                        break;
+                    case 7:
+                        naam7.Content = score.playerName;
+                        score7.Content = score.Score;
+                        break;
+                    case 8:
+                        naam8.Content = score.playerName;
+                        score8.Content = score.Score;
                         break;
                 }
 
