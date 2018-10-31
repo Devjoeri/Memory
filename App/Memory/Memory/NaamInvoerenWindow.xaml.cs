@@ -19,15 +19,14 @@ namespace Memory
     /// </summary>
     public partial class NaamInvoerenWindow : INavigator
     {
-        public NaamInvoerenWindow()
+        public NaamInvoerenWindow(INavigator mainNav)
         {
             InitializeComponent();
-            Navigate(new NaamInvoeren(this,this));
+            Navigate(new NaamInvoeren(this,this, mainNav));
         }
         public void Navigate(Page p)
         {
             MainFrame.Navigate(p);
         }
-
     }
 }

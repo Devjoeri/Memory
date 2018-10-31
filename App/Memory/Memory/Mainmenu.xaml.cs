@@ -34,9 +34,10 @@ namespace Memory
         /// <param name="e"></param>
         private void SinglePlayer(object sender, RoutedEventArgs e)
         {
-           NaamInvoerenWindow setupDialog = new NaamInvoerenWindow();
+           NaamInvoerenWindow setupDialog = new NaamInvoerenWindow(_navigator);
            setupDialog.ShowDialog();
-           _navigator.Navigate(new Game(_navigator));
+           // setupDialog.getSetupInfo();
+          // _navigator.Navigate(new Game(_navigator));
         }
         
         /// <summary>

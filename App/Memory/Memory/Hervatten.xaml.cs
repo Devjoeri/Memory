@@ -30,12 +30,12 @@ namespace Memory
 
         public void jaHervatten(object sender, RoutedEventArgs e)
         {
-            _navigator.Navigate(new Game(_navigator));
+            //_navigator.Navigate(new Game(_navigator));
         }
 
         public void neeHervatten(object sender, RoutedEventArgs e)
         {
-            _navigator.Navigate(new Game(_navigator));
+            //_navigator.Navigate(new Game(_navigator));
         }
 
     }

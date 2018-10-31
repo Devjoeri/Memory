@@ -23,11 +23,11 @@ namespace Memory
     {
         MemoryGrid grid;
         private INavigator _navigator;
-        public Game(INavigator navigator)
+        public Game(INavigator navigator, string[] setup)
         {
             _navigator = navigator;
             InitializeComponent();
-            grid = new MemoryGrid(SideBar, CardGrid, 4, 4);
+            grid = new MemoryGrid(SideBar, CardGrid, 4, 4, setup);
             
         }
     }

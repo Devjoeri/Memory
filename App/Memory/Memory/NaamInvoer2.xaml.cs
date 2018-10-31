@@ -20,14 +20,20 @@ namespace Memory
     /// </summary>
     public partial class NaamInvoer2 : Page
     {
+        private string player1;
         private string player2;
         private int difficulty;
-        INavigator _navigator;
+        private int gridsize;
+        private string[] setup = new string[4];
+        INavigator _navigator, _mainNav;
         NaamInvoerenWindow _window;
-        public NaamInvoer2(NaamInvoerenWindow window, INavigator navigator)
+        public NaamInvoer2(NaamInvoerenWindow window, INavigator navigator, INavigator mainNav, string player1, int gridsize)
         {
             InitializeComponent();
+            this.player1 = player1;
+            this.gridsize = gridsize;
             _window = window;
+            _mainNav = mainNav;
             _navigator = navigator;
         }
 
@@ -36,15 +42,22 @@ namespace Memory
             if (!string.IsNullOrWhiteSpace(naamSpeler2.Text))
             {
                 this.player2 = naamSpeler2.Text;
-                //Ga terug naar main window
-                _window.Close();
+                if (player1 != player2)
+                {
+                    setup[1] = player1;
+                    setup[2] = player2;
+                    _mainNav.Navigate(new Game(_mainNav, setup));
+                    //Ga terug naar main window
+                    _window.Close();
+                }
             }
 
         }
 
         public void Back(object sender, RoutedEventArgs e)
         {
-            _navigator.Navigate(new NaamInvoeren(_navigator, _window));
+            _navigator.Navigate(new NaamInvoeren(_navigator, _window, _mainNav));
         }
+       
     }
 }

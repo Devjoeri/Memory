@@ -30,12 +30,12 @@ namespace Memory
 
         public List<int> imagesList = new List<int>(); //Lijst met images zodat deze mee kan gegeven worden aan de save class
 
-        public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows)
+        public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows, string[] setup)
         {
             this.grid = grid;
             this.rows = rows;
             this.columns = colums;
-            this.sidebar = new Sidebar(sidebar);
+            this.sidebar = new Sidebar(sidebar, setup);
             AddImages();
             initGrid(colums, rows);
             
