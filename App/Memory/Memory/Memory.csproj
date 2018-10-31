@@ -82,6 +82,7 @@
       <DependentUpon>Hervatten.xaml</DependentUpon>
     </Compile>
     <Compile Include="Highscore.cs" />
+    <Compile Include="JsonTools.cs" />
     <Compile Include="NaamInvoer2.xaml.cs">
       <DependentUpon>NaamInvoer2.xaml</DependentUpon>
     </Compile>

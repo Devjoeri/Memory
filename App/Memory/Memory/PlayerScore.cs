@@ -12,11 +12,11 @@ namespace Memory
         public string playerName;
         public int Score;
 
-        public PlayerScore(int Id, string playerName, int Score)
+        public PlayerScore(string playerName, int Score)
         {
             this.playerName = playerName;
             this.Score = Score;
-            this.Id = Id;
+            this.Id = 0;
         }
     }
 }

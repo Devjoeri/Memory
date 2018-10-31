@@ -36,40 +36,22 @@ namespace Memory
             InitializeComponent();
             _navigator = navigator;
             _highscore = new Highscore();
-            //_highscore.addScore(new PlayerScore(0,"Jador",130));
-            //_highscore.writeHighscores(Scores);
-            writeHighscores();
-            DisplayHighscores();
-        }
+            //test code adden van score
+            _highscore.addScore(new PlayerScore("Joeri", 10));
+            _highscore.addScore(new PlayerScore("Jador",130));
+            _highscore.addScore(new PlayerScore("Wouter", 160));
 
-        public void writeHighscores()
-        {
-            Scores = new List<PlayerScore>();
-            Random rnd = new Random();
-
-            for (int i = 0; i < 9; i++)
-            {
-                Scores.Add(new PlayerScore(i, "Jador", rnd.Next(100, 1000)));
-            }
-
-
-            string saveJson = JsonConvert.SerializeObject(Scores);
-            File.WriteAllText("highscores.json", saveJson);
-
+            DisplayHighscores(_highscore.getScores());
         }
 
         /// <summary>
         /// Deze functie displayed de list met highscores die hem meegeeft op de window
         /// </summary>
         /// <param name="scores"></param>
-        public void DisplayHighscores()
+        public void DisplayHighscores(List<PlayerScore> Highscores)
         {
 
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-            string JsonFile = File.ReadAllText("highscores.json");
-            List<PlayerScore> scores = JsonConvert.DeserializeObject<List<PlayerScore>>(JsonFile);
-
-            foreach (PlayerScore score in scores)
+            foreach (PlayerScore score in Highscores)
             {
 
                 switch(score.Id){

@@ -9,53 +9,77 @@ using System.Web.Script.Serialization;
 
 namespace Memory
 {
-    class Highscore
+    class Highscore : JsonTools
     {
+        List<PlayerScore> _HighScores;
+
+        public Highscore()
+        {
+        }
+
         /// <summary>
-        /// Deze functie schrijft de list met scores naar het json bestand
+        /// Deze functie schrijft de megegeven highscores list naar een json bestand
         /// </summary>
-        /// <param name="Scores"></param>
-        //public void writeHighscores(List<PlayerScore> Scores)
-        //{
-        //    List<PlayerScore> _Scores = Scores;
-        //    Random rnd = new Random();
+        /// <param name="Highscores"></param>
+        public void writeHighscores(List<PlayerScore> Highscores)
+        {
+            //Scores = new List<PlayerScore>();
+            //Random rnd = new Random();
 
-        //    for (int i = 0; i < 9; i++)
-        //    {                
-        //        Scores.Add(new PlayerScore(i,"Jador", rnd.Next(100,1000)));
-        //    }
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    Scores.Add(new PlayerScore(i, "Jador", rnd.Next(100, 1000)));
+            //}
 
-
-        //    string saveJson = JsonConvert.SerializeObject(Scores);
-        //    File.WriteAllText("highscores.json", saveJson);
-
-        //}
-
-        //public void addScore(PlayerScore playerScore)
-        //{
-        //    List<PlayerScore> Scores = new List<PlayerScore>();
-        //    Scores = readHighscores();
-
-        //    if (Scores.Count >= 8)
-        //    {
-        //        Scores.RemoveAt(Scores.Count - 1);
-        //        if (Scores.Count >= 8)
-        //        {
-        //            Scores.Add(playerScore);
-        //        }
-        //    }
-        //    writeHighscores(Scores);
-        //}
+            writeToJson(Highscores,"highscores");
+        }
 
         /// <summary>
         /// Deze functie leest het json bestand in en geeft de list met scores terug
         /// </summary>
         /// <returns></returns>
-        public List<PlayerScore> readHighscores()
+        public List<PlayerScore> getScores()
         {
             JavaScriptSerializer ser = new JavaScriptSerializer();
+            List<PlayerScore> scores;
             string JsonFile = File.ReadAllText("highscores.json");
-            return JsonConvert.DeserializeObject<List<PlayerScore>>(JsonFile);
+
+            if (new FileInfo("highscores.json").Length == 0) {
+                List<PlayerScore> tempScore = new List<PlayerScore>();
+                tempScore.Add(new PlayerScore("Naam", 0));
+                scores = tempScore;
+            }
+            else
+            {
+                scores = JsonConvert.DeserializeObject<List<PlayerScore>>(JsonFile);
+            }
+            
+            return scores;
+        }
+
+        public void addScore(PlayerScore score)
+        {
+            if (_HighScores == null) {
+                _HighScores = new List<PlayerScore>();
+                _HighScores.Add(score);
+            }
+            else
+            {
+                _HighScores.Add(score);
+                _HighScores = _HighScores.OrderByDescending(_scores => _scores.Score).ToList();
+                writeHighscores(placeToId(_HighScores));
+            }
+
+        }
+
+        public List<PlayerScore> placeToId(List<PlayerScore> highscores)
+        {
+            List<PlayerScore> _highscores = highscores;
+            for (int i = 0; i < highscores.Count; i++)
+            {
+                highscores.ElementAt(i).Id = i;
+            }
+            return _highscores;
         }
     }
 }

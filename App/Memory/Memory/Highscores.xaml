@@ -38,9 +38,9 @@
         <Label Content="3" HorizontalAlignment="Center" Margin="488,147,288,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
         <Label x:Name="naam0" Content="Naam" HorizontalAlignment="Center" Margin="375,28,375,0" VerticalAlignment="Top"/>
         <Label x:Name="score0" Content="Score: SCORE" HorizontalAlignment="Center" Margin="346,45,346,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="naam2" Content="Naam" HorizontalAlignment="Center" Margin="275,73,475,0" VerticalAlignment="Top"/>
+        <Label x:Name="naam1" Content="Naam" HorizontalAlignment="Center" Margin="275,73,475,0" VerticalAlignment="Top"/>
         <Label x:Name="score1" Content="Score: SCORE" HorizontalAlignment="Center" Margin="246,90,446,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="naam1" Content="Naam" HorizontalAlignment="Center" Margin="475,93,275,0" VerticalAlignment="Top"/>
+        <Label x:Name="naam2" Content="Naam" HorizontalAlignment="Center" Margin="475,93,275,0" VerticalAlignment="Top"/>
         <Label x:Name="score2" Content="Score: SCORE" HorizontalAlignment="Center" Margin="446,110,246,0" VerticalAlignment="Top" Width="100"/>
         <Grid HorizontalAlignment="Left" Height="83" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" Grid.Row="2">
             <Grid.ColumnDefinitions>

@@ -32,11 +32,24 @@
             InitializeComponent
             </summary>
         </member>
-        <member name="M:Memory.Highscore.readHighscores">
+        <member name="M:Memory.Highscore.writeHighscores(System.Collections.Generic.List{Memory.PlayerScore})">
+            <summary>
+            Deze functie schrijft de megegeven highscores list naar een json bestand
+            </summary>
+            <param name="Highscores"></param>
+        </member>
+        <member name="M:Memory.Highscore.getScores">
             <summary>
             Deze functie leest het json bestand in en geeft de list met scores terug
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:Memory.JsonTools.writeToJson(System.Object,System.String)">
+            <summary>
+            Deze functie schrijft het megegeven object naar een json bestand met de megegeven naam
+            </summary>
+            <param name="obj"></param>
+            <param name="outputName"></param>
         </member>
         <member name="T:Memory.NaamInvoer2">
             <summary>
@@ -188,7 +201,7 @@
             Highscores
             </summary>
         </member>
-        <member name="M:Memory.Highscores.DisplayHighscores">
+        <member name="M:Memory.Highscores.DisplayHighscores(System.Collections.Generic.List{Memory.PlayerScore})">
             <summary>
             Deze functie displayed de list met highscores die hem meegeeft op de window
             </summary>
