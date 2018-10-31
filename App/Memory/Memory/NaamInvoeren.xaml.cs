@@ -40,6 +40,10 @@ namespace Memory
                 this.player1 = nameInput.Text;
                 _navigator.Navigate(new NaamInvoer2(_window, _navigator, _mainNav, player1, gridsize));
             }
+            if (string.IsNullOrEmpty(nameInput.Text))
+            {
+                noNameLabel.Content = "U heeft geen naam ingevuld!";
+            }
             
         }
 
