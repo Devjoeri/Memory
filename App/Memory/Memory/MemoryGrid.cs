@@ -25,7 +25,7 @@ namespace Memory
         public object RowDefinitions { get; internal set; }
 
         private int cardsTurned = 0;
-        private Image turnedCard;
+        private Card turnedCard;
         private object pic;
 
         public List<int> imagesList = new List<int>(); //Lijst met images zodat deze mee kan gegeven worden aan de save class
@@ -62,7 +62,7 @@ namespace Memory
         /// </summary>
         private void AddImages()
         {
-            List<ImageSource> images = GetImagesList();
+            List<Card> images = GetImagesList();
             
             for (int row = 0; row < rows; row++)
             {
@@ -70,7 +70,7 @@ namespace Memory
                 {
                     Image backgroundImage = new Image();
                     backgroundImage.Source = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
-                    //backgroundImage.Source = images.First();
+                    //backgroundImage.Source = images.First().getImage();
                     backgroundImage.Tag = images.First();
                     images.RemoveAt(0);
                     backgroundImage.MouseDown += new MouseButtonEventHandler(CardClick);
@@ -84,14 +84,14 @@ namespace Memory
         /// Hier randomize we de plaatjes voor de kaarten als je ze omdraait
         /// </summary>
         /// <returns></returns>
-        private List<ImageSource> GetImagesList()
+        private List<Card> GetImagesList()
         {
-            List<ImageSource> images = new List<ImageSource>();
+            List<Card> images = new List<Card>();
             for(int i = 0; i < rows*columns; i++)
             {
                 int imageNr = i % 8 + 1; //De 8 is hardcoded, moet nog een variabele worden
                 ImageSource source = new BitmapImage(new Uri("Images/"+imageNr+".png", UriKind.Relative));
-                images.Add(source);
+                images.Add(new Card(source, imageNr));
 
                 //Voeg Imagenr toe aan de lijst voor de save
                 imagesList.Add(imageNr);
@@ -103,7 +103,7 @@ namespace Memory
                 
                 int rnd = random.Next(i + 1);
 
-                ImageSource value = images[rnd];
+                Card value = images[rnd];
                 images[rnd] = images[i];
                 images[i] = value;
             }
@@ -121,27 +121,30 @@ namespace Memory
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
             Image card = (Image)sender;
-            ImageSource front = (ImageSource)card.Tag;
-            card.Source = front;
+            //Console.WriteLine(card.getNumber());
+            Card front = (Card)card.Tag;
+            card.Source = front.getImage();
             cardsTurned++;
             if (cardsTurned == 1)
             {
-                turnedCard = card;
+                turnedCard = front;
             }
             if (cardsTurned == 2)
             {
-                if (card.Uid == turnedCard.Uid)
-                {
-                    
-                    string player = sidebar.getTurn();
+                string player = sidebar.getTurn();
+                if (front.getNumber() == turnedCard.getNumber())
+                { 
                     sidebar.AddPoint(player);
                 }
-                //else
-                //{
+                else
+                {
+                    turnedCard.flipCard();
                     //turnedCard = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
-                //}
-
-            }         
+                }
+                sidebar.setTurn(player);
+                cardsTurned = 0;
+            }
+            
         }
 
     }
