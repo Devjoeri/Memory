@@ -27,11 +27,11 @@ namespace Memory
 
         private Label lplayer1 = new Label();
         private Label lplayer2 = new Label();
-        public Sidebar(Grid SideBar)
+        public Sidebar(Grid SideBar, string[] setup)
         {
             this.sidebar = SideBar;
-            this.player1 = "Joeri";
-            this.player2 = "Jos";
+            this.player1 = setup[1];
+            this.player2 = setup[2];
             this.turn = player1;
             initGrid();
             AddLabel();
