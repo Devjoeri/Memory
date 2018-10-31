@@ -16,12 +16,11 @@ using System.Windows.Shapes;
 namespace Memory
 {
     /// <summary>
-    /// Hier pakken we de naam voor de tweede speler, en gaan we kijken of ze overeen komen met speler een.
-    /// Als dit waar is, moet speler 2 een andere naam invullen
+    /// Interaction logic for NaamInvoeren1.xaml
     /// </summary>
-    public partial class NaamInvoeren3 : Window
+    public partial class NaamInvoeren1 : Page
     {
-        public NaamInvoeren3()
+        public NaamInvoeren1()
         {
             InitializeComponent();
         }
