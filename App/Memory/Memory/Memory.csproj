@@ -80,12 +80,6 @@
     <Compile Include="Hervatten.xaml.cs">
       <DependentUpon>Hervatten.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NaamInvoeren.xaml.cs">
-      <DependentUpon>NaamInvoeren.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NaamInvoeren2.xaml.cs">
-      <DependentUpon>NaamInvoeren2.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Save.cs" />
     <Compile Include="Sidebar.cs" />
     <Compile Include="Winner.xaml.cs">
@@ -136,14 +130,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NaamInvoeren.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="NaamInvoeren2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Winner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

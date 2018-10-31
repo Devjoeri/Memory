@@ -32,33 +32,6 @@
             InitializeComponent
             </summary>
         </member>
-        <member name="T:Memory.NaamInvoeren">
-            <summary>
-            hier pakken we de naam van de eerste speler.
-            </summary>
-            <summary>
-            NaamInvoeren
-            </summary>
-        </member>
-        <member name="M:Memory.NaamInvoeren.InitializeComponent">
-            <summary>
-            InitializeComponent
-            </summary>
-        </member>
-        <member name="T:Memory.NaamInvoeren3">
-            <summary>
-            Hier pakken we de naam voor de tweede speler, en gaan we kijken of ze overeen komen met speler een.
-            Als dit waar is, moet speler 2 een andere naam invullen
-            </summary>
-            <summary>
-            NaamInvoeren3
-            </summary>
-        </member>
-        <member name="M:Memory.NaamInvoeren3.InitializeComponent">
-            <summary>
-            InitializeComponent
-            </summary>
-        </member>
         <member name="T:Memory.Sidebar">
             <summary>
             De aparte class voor de sidebar.
