@@ -9,39 +9,41 @@
       Title="NaamInvoer2">
 
     <Grid>
-        <Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,10,10,9.6" Width="778" Height="310">
             <Label Content="NaamInvoeren" HorizontalAlignment="Center" Margin="268,10,251,0" VerticalAlignment="Top" FontSize="38"/>
 
-            <!--TextBox Speler 1-->
+            <!--TextBox Speler 1
             <Grid Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="245*"/>
                     <ColumnDefinition Width="547*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Speler 2:" FontSize="18" Margin="230,75,250,230" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Column="1" x:Name="naamSpeler2" Margin="70,75,250,230"/>
-            </Grid>
 
-            <!--Kies bordgroote-->
+            </Grid>-->
+            <TextBlock Text="Speler 2:" FontSize="18" Margin="230,75,250,195"/>
+            <TextBox x:Name="naamSpeler2" Margin="311,76,224,193"/>
+            <!--Kies bordgroote
             <Grid Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0"  Content="Makkelijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0" Padding="20,15" FontSize="18"/>
-                <Button Grid.Column="1"  Content="Gemiddeld" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0" Padding="20,15" FontSize="18"/>
-                <Button Grid.Column="2"  Content="Moeilijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0" Padding="20,15" FontSize="18"/>
-            </Grid>
 
-            <Grid>
+            </Grid>-->
+            <Button Grid.Column="0"  Content="Makkelijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="130,147,518,107" FontSize="18" Height="56" Width="130"/>
+            <Button  Content="Gemiddeld" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="341,147,307,107" Padding="20,15" FontSize="18" Width="130"/>
+            <Button  Content="Moeilijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="545,147,103,107" Padding="20,15" FontSize="18" Width="130"/>
+
+            <!--<Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Click="Back" Grid.Column="0" Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="200,0,0,20" Padding="30,4" FontSize="18"/>
-                <Button Click="Next" Grid.Column="1" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,200,20" Padding="16,4" FontSize="18"/>
-            </Grid>
+
+            </Grid>-->
+            <Button Click="Back" Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="201,0,471,20" Padding="30,4" FontSize="18"/>
+            <Button Click="Next" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="488,0,181,20" Padding="16,4" FontSize="18"/>
         </Grid>
     </Grid>
 
