@@ -36,7 +36,7 @@ namespace Memory
         {
             //NaamInvoerenFrame setupDialog = new NaamInvoerenFrame();
            // setupDialog.ShowDialog();
-           // _navigator.Navigate(new Game(_navigator));
+           _navigator.Navigate(new Game(_navigator));
         }
         
         /// <summary>
