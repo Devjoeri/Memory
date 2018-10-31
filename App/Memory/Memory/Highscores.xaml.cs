@@ -19,7 +19,7 @@ using Newtonsoft.Json;
 
 namespace Memory
 {
- 
+
     /// <summary>
     /// Hier halen we scores uit een JSON bestand, en plaatsen deze op de juiste plek.
     /// Om zo te laten zien wie er de meeste punten heeft behaald.
@@ -28,38 +28,28 @@ namespace Memory
     {
         public List<PlayerScore> Scores;
         public List<PlayerScore> ScoresToDisplay;
-        public class PlayerScore
-        {
-            public int Id;
-            public string playerName;
-            public int Score;
-
-            public PlayerScore(int Id,string playerName, int Score)
-            {
-                this.playerName = playerName;
-                this.Score = Score;
-                this.Id = Id;
-            }
-
-        }
-
+        Highscore _highscore;
 
         private INavigator _navigator;
         public Highscores(INavigator navigator)
         {
             InitializeComponent();
             _navigator = navigator;
-           //writeHighscores();
-           readHighscores();
+            _highscore = new Highscore();
+            //_highscore.addScore(new PlayerScore(0,"Jador",130));
+            //_highscore.writeHighscores(Scores);
+            writeHighscores();
+            DisplayHighscores();
         }
-        
+
         public void writeHighscores()
         {
             Scores = new List<PlayerScore>();
+            Random rnd = new Random();
 
             for (int i = 0; i < 9; i++)
-            { 
-                Scores.Add(new PlayerScore(i,"Jador", 120));
+            {
+                Scores.Add(new PlayerScore(i, "Jador", rnd.Next(100, 1000)));
             }
 
 
@@ -68,13 +58,18 @@ namespace Memory
 
         }
 
-        public void readHighscores()
+        /// <summary>
+        /// Deze functie displayed de list met highscores die hem meegeeft op de window
+        /// </summary>
+        /// <param name="scores"></param>
+        public void DisplayHighscores()
         {
+
             JavaScriptSerializer ser = new JavaScriptSerializer();
             string JsonFile = File.ReadAllText("highscores.json");
-            ScoresToDisplay = JsonConvert.DeserializeObject<List<PlayerScore>>(JsonFile);
+            List<PlayerScore> scores = JsonConvert.DeserializeObject<List<PlayerScore>>(JsonFile);
 
-            foreach (PlayerScore score in ScoresToDisplay)
+            foreach (PlayerScore score in scores)
             {
 
                 switch(score.Id){

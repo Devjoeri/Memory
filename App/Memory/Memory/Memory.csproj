@@ -80,6 +80,7 @@
     <Compile Include="Hervatten.xaml.cs">
       <DependentUpon>Hervatten.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Highscore.cs" />
     <Compile Include="NaamInvoer2.xaml.cs">
       <DependentUpon>NaamInvoer2.xaml</DependentUpon>
     </Compile>
@@ -89,6 +90,7 @@
     <Compile Include="NaamInvoerenWindow.xaml.cs">
       <DependentUpon>NaamInvoerenWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlayerScore.cs" />
     <Compile Include="Save.cs" />
     <Compile Include="Sidebar.cs" />
     <Compile Include="Winner.xaml.cs">
