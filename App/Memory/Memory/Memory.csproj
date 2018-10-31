@@ -74,6 +74,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Card.cs" />
     <Compile Include="Giveup.xaml.cs">
       <DependentUpon>Giveup.xaml</DependentUpon>
     </Compile>
