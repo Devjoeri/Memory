@@ -49,15 +49,15 @@ namespace Memory
         {
             InitializeComponent();
             _navigator = navigator;
-           writeHighscores();
-            readHighscores();
+           //writeHighscores();
+           readHighscores();
         }
         
         public void writeHighscores()
         {
             Scores = new List<PlayerScore>();
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 6; i++)
             { 
                 Scores.Add(new PlayerScore(i,"Jador", 120));
             }
@@ -76,7 +76,34 @@ namespace Memory
 
             foreach (PlayerScore score in ScoresToDisplay)
             {
-                Console.WriteLine(score.Id);
+
+                switch(score.Id){
+                    case 0:
+                        naam0.Content = score.playerName;
+                        score0.Content = score.Score;
+                        break;
+                    case 1:
+                        naam1.Content = score.playerName;
+                        score1.Content = score.Score;
+                        break;
+                    case 2:
+                        naam2.Content = score.playerName;
+                        score2.Content = score.Score;
+                        break;
+                    case 3:
+                        naam3.Content = score.playerName;
+                        score3.Content = score.Score;
+                        break;
+                    case 4:
+                        naam4.Content = score.playerName;
+                        score4.Content = score.Score;
+                        break;
+                    case 5:
+                        naam5.Content = score.playerName;
+                        score5.Content = score.Score;
+                        break;
+                }
+
             }
 
         }
