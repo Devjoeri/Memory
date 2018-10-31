@@ -16,32 +16,69 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
+
 namespace Memory
 {
-    class highscore
-    {
-        public string playerName { get; set; }
-        public int Score { get; set; }
-
-        public class HighScores
-        {
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-            
-            highscore highScoreLoad = JsonConvert.DeserializeObject<highscore>(File.ReadAllText(@"Saves/highscore.json"));
-
-        }
-    }
+ 
     /// <summary>
     /// Hier halen we scores uit een JSON bestand, en plaatsen deze op de juiste plek.
     /// Om zo te laten zien wie er de meeste punten heeft behaald.
     /// </summary>
     public partial class Highscores : Page
     {
+        public List<PlayerScore> Scores;
+        public List<PlayerScore> ScoresToDisplay;
+        public class PlayerScore
+        {
+            public int Id;
+            public string playerName;
+            public int Score;
+
+            public PlayerScore(int Id,string playerName, int Score)
+            {
+                this.playerName = playerName;
+                this.Score = Score;
+                this.Id = Id;
+            }
+
+        }
+
+
         private INavigator _navigator;
         public Highscores(INavigator navigator)
         {
             InitializeComponent();
             _navigator = navigator;
+           writeHighscores();
+            readHighscores();
+        }
+        
+        public void writeHighscores()
+        {
+            Scores = new List<PlayerScore>();
+
+            for (int i = 0; i < 10; i++)
+            { 
+                Scores.Add(new PlayerScore(i,"Jador", 120));
+            }
+
+
+            string saveJson = JsonConvert.SerializeObject(Scores);
+            File.WriteAllText("highscores.json", saveJson);
+
+        }
+
+        public void readHighscores()
+        {
+            JavaScriptSerializer ser = new JavaScriptSerializer();
+            string JsonFile = File.ReadAllText("highscores.json");
+            ScoresToDisplay = JsonConvert.DeserializeObject<List<PlayerScore>>(JsonFile);
+
+            foreach (PlayerScore score in ScoresToDisplay)
+            {
+                Console.WriteLine(score.Id);
+            }
+
         }
 
         /// <summary>
