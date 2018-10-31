@@ -50,6 +50,15 @@ namespace Memory
                     //Ga terug naar main window
                     _window.Close();
                 }
+                if(player1 == player2)
+                {
+                    noNameLabel_2.Content = "Player 2 heeft dezelde naam als player 1";
+                }
+            
+            }
+            if (string.IsNullOrEmpty(naamSpeler2.Text))
+            {
+                noNameLabel_2.Content = "U heeft geen naam ingevuld!";
             }
 
         }

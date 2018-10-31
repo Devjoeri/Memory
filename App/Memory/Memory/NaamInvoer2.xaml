@@ -44,6 +44,7 @@
             </Grid>-->
             <Button Click="Back" Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="201,0,471,20" Padding="30,4" FontSize="18"/>
             <Button Click="Next" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="488,0,181,20" Padding="16,4" FontSize="18"/>
+            <Label x:Name="noNameLabel_2" HorizontalAlignment="Center" Margin="311,216,71,58" VerticalAlignment="Center" Height="36" Width="396" FontSize="16"/>
         </Grid>
     </Grid>
 
