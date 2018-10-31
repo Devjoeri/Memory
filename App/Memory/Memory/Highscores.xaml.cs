@@ -36,6 +36,7 @@ namespace Memory
             InitializeComponent();
             _navigator = navigator;
             _highscore = new Highscore();
+            
             //test code adden van score
             _highscore.addScore(new PlayerScore("Joeri", 10));
             _highscore.addScore(new PlayerScore("Jador",130));
@@ -50,10 +51,13 @@ namespace Memory
         /// <param name="scores"></param>
         public void DisplayHighscores(List<PlayerScore> Highscores)
         {
+            if(Highscores == null)
+            {
+                return;
+            }
 
             foreach (PlayerScore score in Highscores)
             {
-
                 switch(score.Id){
                     case 0:
                         naam0.Content = score.playerName;
@@ -92,9 +96,7 @@ namespace Memory
                         score8.Content = score.Score;
                         break;
                 }
-
             }
-
         }
 
         /// <summary>

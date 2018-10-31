@@ -43,20 +43,14 @@ namespace Memory
             JavaScriptSerializer ser = new JavaScriptSerializer();
             List<PlayerScore> scores;
             string JsonFile = File.ReadAllText("highscores.json");
-
-            if (new FileInfo("highscores.json").Length == 0) {
-                List<PlayerScore> tempScore = new List<PlayerScore>();
-                tempScore.Add(new PlayerScore("Naam", 0));
-                scores = tempScore;
-            }
-            else
-            {
-                scores = JsonConvert.DeserializeObject<List<PlayerScore>>(JsonFile);
-            }
             
-            return scores;
+            return JsonConvert.DeserializeObject<List<PlayerScore>>(JsonFile);
         }
 
+        /// <summary>
+        /// Deze functie geef je een player object mee en voegt deze toe aan de Highscore list
+        /// </summary>
+        /// <param name="score"></param>
         public void addScore(PlayerScore score)
         {
             if (_HighScores == null) {
@@ -72,6 +66,11 @@ namespace Memory
 
         }
 
+        /// <summary>
+        /// Deze functie geeft de 'Id' variabele de id van de plaats in de list 
+        /// </summary>
+        /// <param name="highscores"></param>
+        /// <returns></returns>
         public List<PlayerScore> placeToId(List<PlayerScore> highscores)
         {
             List<PlayerScore> _highscores = highscores;
