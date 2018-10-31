@@ -16,21 +16,10 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
+
 namespace Memory
 {
-    class highscore
-    {
-        public string playerName { get; set; }
-        public int Score { get; set; }
-
-        public class HighScores
-        {
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-            
-            highscore highScoreLoad = JsonConvert.DeserializeObject<highscore>(File.ReadAllText(@"Saves/highscore.json"));
-
-        }
-    }
+ 
     /// <summary>
     /// Hier halen we scores uit een JSON bestand, en plaatsen deze op de juiste plek.
     /// Om zo te laten zien wie er de meeste punten heeft behaald.
@@ -42,6 +31,7 @@ namespace Memory
         {
             InitializeComponent();
             _navigator = navigator;
+
         }
 
         /// <summary>

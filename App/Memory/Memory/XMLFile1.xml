@@ -71,6 +71,17 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="M:Memory.Save.#ctor(System.String,System.Int32,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            Slaat alle game data op met de meegegeven informatie
+            </summary>
+            <param name="player1"></param>
+            <param name="score1"></param>
+            <param name="player2"></param>
+            <param name="score2"></param>
+            <param name="turn"></param>
+            <param name="size"></param>
+        </member>
         <member name="T:Memory.Sidebar">
             <summary>
             De aparte class voor de sidebar.

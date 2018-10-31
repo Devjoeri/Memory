@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
+using System.Windows;
+using static System.Environment;
 
 namespace Memory
 {
     class Save
     {
-
+        
         //info
         public int size;
         public string player1;
@@ -40,8 +42,18 @@ namespace Memory
 
         }; 
 
+        /// <summary>
+        /// Slaat alle game data op met de meegegeven informatie
+        /// </summary>
+        /// <param name="player1"></param>
+        /// <param name="score1"></param>
+        /// <param name="player2"></param>
+        /// <param name="score2"></param>
+        /// <param name="turn"></param>
+        /// <param name="size"></param>
         public Save(string player1, int score1, string player2, int score2, string turn,int size)
         {
+            //var directory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
             JavaScriptSerializer ser = new JavaScriptSerializer();
 
             //Set Save Data
@@ -65,7 +77,8 @@ namespace Memory
             }
 
             string saveJson = JsonConvert.SerializeObject(this);
-            File.WriteAllText("Savetest.json", saveJson);
+            File.WriteAllText("save.json", saveJson);
+            //File.WriteAllText()
         }
     }
 }
