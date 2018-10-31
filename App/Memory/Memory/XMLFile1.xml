@@ -32,6 +32,45 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:Memory.NaamInvoer2">
+            <summary>
+            Interaction logic for NaamInvoer2.xaml
+            </summary>
+            <summary>
+            NaamInvoer2
+            </summary>
+        </member>
+        <member name="M:Memory.NaamInvoer2.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.NaamInvoeren">
+            <summary>
+            Interaction logic for NaamInvoeren.xaml
+            </summary>
+            <summary>
+            NaamInvoeren
+            </summary>
+        </member>
+        <member name="M:Memory.NaamInvoeren.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Memory.NaamInvoerenWindow">
+            <summary>
+            Interaction logic for NaamInvoerenWindow.xaml
+            </summary>
+            <summary>
+            NaamInvoerenWindow
+            </summary>
+        </member>
+        <member name="M:Memory.NaamInvoerenWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:Memory.Sidebar">
             <summary>
             De aparte class voor de sidebar.
