@@ -27,6 +27,7 @@ namespace Memory
 
         private Label lplayer1 = new Label();
         private Label lplayer2 = new Label();
+        private Label tplayer = new Label();
         public Sidebar(Grid SideBar, string[] setup)
         {
             this.sidebar = SideBar;
@@ -60,7 +61,6 @@ namespace Memory
             if (player == player1)
             {
                 player1Score++;
-                //AddScore();
                 lplayer1.Dispatcher.Invoke(new Action(() => { lplayer1.Content = "Score " + this.player1 + ": " + this.player1Score; }));
             }
             if (player == player2)
@@ -72,9 +72,17 @@ namespace Memory
         /// <summary>
         /// Hier setten we de turn
         /// </summary>
-        public void setTurn()
+        public void setTurn(string player)
         {
-
+            if (player == player1)
+            {
+                turn = player2;
+            }
+            if(player == player2)
+            {
+                turn = player1;
+            }
+            tplayer.Dispatcher.Invoke(new Action(() => { tplayer.Content = turn; }));
         }
         /// <summary>
         /// Hier returne wij de turn, dus wie aan zet is
@@ -155,15 +163,15 @@ namespace Memory
             Grid.SetRow(turn, 8);
 
             sidebar.Children.Add(turn);
-            Label player = new Label();
-            player.Content = getTurn();
-            player.FontSize = 15;
-            player.HorizontalAlignment = HorizontalAlignment.Center;
+            
+            tplayer.Content = getTurn();
+            tplayer.FontSize = 15;
+            tplayer.HorizontalAlignment = HorizontalAlignment.Center;
 
-            Grid.SetColumn(player, 0);
-            Grid.SetRow(player, 9);
+            Grid.SetColumn(tplayer, 0);
+            Grid.SetRow(tplayer, 9);
 
-            sidebar.Children.Add(player);
+            sidebar.Children.Add(tplayer);
         }
    
         private void SaveClick(object sender, RoutedEventArgs e)

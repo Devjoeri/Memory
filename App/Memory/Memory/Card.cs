@@ -11,6 +11,7 @@ namespace Memory
     {
         private ImageSource image;
         private int number;
+        private Boolean flipped = false;
         public Card(ImageSource image, int number) {
             this.image = image;
             this.number = number;
@@ -22,6 +23,10 @@ namespace Memory
         public ImageSource getImage()
         {
             return image;
+        }
+        public void flipCard()
+        {
+            flipped = !flipped;
         }
     }
 }

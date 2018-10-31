@@ -97,7 +97,7 @@
             </summary>
             <param name="player"></param>
         </member>
-        <member name="M:Memory.Sidebar.setTurn">
+        <member name="M:Memory.Sidebar.setTurn(System.String)">
             <summary>
             Hier setten we de turn
             </summary>

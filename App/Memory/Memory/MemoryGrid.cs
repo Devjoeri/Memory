@@ -131,18 +131,20 @@ namespace Memory
             }
             if (cardsTurned == 2)
             {
-               if (front.getNumber() == turnedCard.getNumber())
-                {
-                    
-                    string player = sidebar.getTurn();
+                string player = sidebar.getTurn();
+                if (front.getNumber() == turnedCard.getNumber())
+                { 
                     sidebar.AddPoint(player);
                 }
-                //else
-                //{
+                else
+                {
+                    turnedCard.flipCard();
                     //turnedCard = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
-                //}
-
-            }         
+                }
+                sidebar.setTurn(player);
+                cardsTurned = 0;
+            }
+            
         }
 
     }
