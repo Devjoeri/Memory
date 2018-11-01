@@ -27,7 +27,7 @@ namespace Memory
         private int cardsTurned = 0;
         private Card turnedCard;
         private object pic;
-
+        private Image oldcard;
         Highscore _highscore;
 
 
@@ -121,28 +121,33 @@ namespace Memory
             Image card = (Image)sender;
             //Console.WriteLine(card.getNumber());
             Card front = (Card)card.Tag;
-            card.Source = front.getImage();
+            card.Source = front.flipCard();
             cardsTurned++;
             if (cardsTurned == 1)
             {
+                oldcard = card;
                 turnedCard = front;
             }
+
             if (cardsTurned == 2)
             {
                 string player = sidebar.getTurn();
                 if (front.getNumber() == turnedCard.getNumber())
-                { 
+                {
                     sidebar.AddPoint(player);
                 }
                 else
                 {
-                    turnedCard.flipCard();
-                    //turnedCard = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                        oldcard.Source = turnedCard.flipCard();
+                        //System.Threading.Thread.Sleep(1000);
+                        card.Source = front.flipCard();
+                        //turnedCard = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
                 }
                 sidebar.setTurn(player);
                 cardsTurned = 0;
             }
-            
+
+
         }
 
     }

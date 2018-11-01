@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace Memory
 {
@@ -11,7 +12,9 @@ namespace Memory
     {
         private ImageSource image;
         private int number;
-        private Boolean flipped = false;
+        private bool flipped = false;
+        private ImageSource front;
+
         public Card(ImageSource image, int number) {
             this.image = image;
             this.number = number;
@@ -24,9 +27,19 @@ namespace Memory
         {
             return image;
         }
-        public void flipCard()
+        public ImageSource flipCard()
         {
-            flipped = !flipped;
+            if(flipped != false)
+            {
+                front = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                flipped = false;
+            }
+            else
+            {
+                front = image;
+                flipped = true;
+            }
+            return front;
         }
     }
 }
