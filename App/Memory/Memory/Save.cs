@@ -12,7 +12,7 @@ using static System.Environment;
 
 namespace Memory
 {
-    class Save
+    class Save : JsonTools
     {
         
         //info
@@ -23,7 +23,8 @@ namespace Memory
         public int score2;
         public string turn;
         public List<card> kaarten;
-        List<int> imageList;
+        List<Card> imageList;
+        MemoryGrid memo;
 
         //grid info
         //public int row, column, image;
@@ -51,7 +52,7 @@ namespace Memory
         /// <param name="score2"></param>
         /// <param name="turn"></param>
         /// <param name="size"></param>
-        public Save(string player1, int score1, string player2, int score2, string turn,int size)
+        public Save(string player1, int score1, string player2, int score2, string turn,int size, List<Card> images)
         {
             //var directory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
             JavaScriptSerializer ser = new JavaScriptSerializer();
@@ -63,6 +64,7 @@ namespace Memory
             this.score2 = score2;
             this.turn = turn;
             this.size = size;
+            this.imageList = images;
             kaarten = new List<card>();
 
             //Plaatje op welke plek
@@ -71,14 +73,13 @@ namespace Memory
                 for (int column = 0; column < size; column++)
                 {
                     //int image = getCardImage(row,column);
-                    int image = 0;
-                    kaarten.Add(new card(row,column,image,true));
+                    //int image = 0;
+                    //kaarten.Add(new card(row,column,image,true));
+                    Console.WriteLine(images);
                 }
             }
 
-            string saveJson = JsonConvert.SerializeObject(this);
-            File.WriteAllText("save.json", saveJson);
-            //File.WriteAllText()
+            writeToJson(this, "save");
         }
     }
 }

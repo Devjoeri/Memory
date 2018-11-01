@@ -103,7 +103,7 @@
             InitializeComponent
             </summary>
         </member>
-        <member name="M:Memory.Save.#ctor(System.String,System.Int32,System.String,System.Int32,System.String,System.Int32)">
+        <member name="M:Memory.Save.#ctor(System.String,System.Int32,System.String,System.Int32,System.String,System.Int32,System.Collections.Generic.List{Memory.Card})">
             <summary>
             Slaat alle game data op met de meegegeven informatie
             </summary>

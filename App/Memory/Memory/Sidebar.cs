@@ -30,9 +30,12 @@ namespace Memory
         private Label tplayer = new Label();
 
         Highscore _highscore;
-        public Sidebar(Grid SideBar, string[] setup)
+        List<Card> images;
+
+        public Sidebar(Grid SideBar, string[] setup, List<Card> images)
         {
             _highscore = new Highscore();
+            this.images = images;
             this.sidebar = SideBar;
             this.player1 = setup[1];
             this.player2 = setup[2];
@@ -180,7 +183,7 @@ namespace Memory
         private void SaveClick(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Save");
-            new Save(player1, player1Score, player2, player2Score,getTurn(),4);
+            new Save(player1, player1Score, player2, player2Score,getTurn(),4, images);
             _highscore.addScore(new PlayerScore(player1, player1Score));
             _highscore.addScore(new PlayerScore(player2, player2Score));
         }

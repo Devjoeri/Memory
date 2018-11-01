@@ -28,16 +28,15 @@ namespace Memory
         private Card turnedCard;
         private object pic;
         private Image oldcard;
+        private List<Card> images;
         Highscore _highscore;
-
-
 
         public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows, string[] setup)
         {
             this.grid = grid;
             this.rows = rows;
             this.columns = colums;
-            this.sidebar = new Sidebar(sidebar, setup);
+            this.sidebar = new Sidebar(sidebar, setup, images);
             AddImages();
             initGrid(colums, rows);
         }
@@ -63,7 +62,7 @@ namespace Memory
         /// </summary>
         private void AddImages()
         {
-            List<Card> images = GetImagesList();
+            images = GetImagesList();
             
             for (int row = 0; row < rows; row++)
             {
