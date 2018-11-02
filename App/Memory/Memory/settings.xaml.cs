@@ -22,7 +22,9 @@ namespace Memory
     /// </summary>
     public partial class settings : Page
     {
+        private int counter = 0;
         private INavigator _navigator;
+
         public settings(INavigator navigator)
         {
             _navigator = navigator;
@@ -42,8 +44,10 @@ namespace Memory
                 btn.Width = 500;
                 btn.Height = 25;
                 btn.Content = folder;
+                // btn.Click += new EventHandler();
                 settings_Stackpanel.Children.Add(btn);
             }
+
         }
     }
 }
