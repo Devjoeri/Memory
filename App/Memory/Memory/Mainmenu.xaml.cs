@@ -65,14 +65,6 @@ namespace Memory
 
         }
 
-        /// <summary>
-        /// Go to settings page
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void to_Settings(object sender, RoutedEventArgs e)
-        {
-            _navigator.Navigate(new settings(_navigator));
-        }
+
     }
 }
