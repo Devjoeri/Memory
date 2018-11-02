@@ -14,6 +14,7 @@ namespace Memory
         private int number;
         private bool flipped = false;
         private ImageSource front;
+        private bool isMatched = false;
 
         public Card(ImageSource image, int number) {
             this.image = image;
@@ -40,6 +41,10 @@ namespace Memory
                 flipped = true;
             }
             return front;
+        }
+        public bool matched()
+        {
+            return isMatched;
         }
     }
 }

@@ -46,6 +46,7 @@ namespace Memory
                 {
                     setup[1] = player1;
                     setup[2] = player2;
+                    setup[3] = gridsize.ToString();
                     _mainNav.Navigate(new Game(_mainNav, setup));
                     //Ga terug naar main window
                     _window.Close();

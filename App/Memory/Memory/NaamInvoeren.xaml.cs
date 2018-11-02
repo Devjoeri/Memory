@@ -33,6 +33,15 @@ namespace Memory
             _window = window;
         }
 
+        private void sixBySix_Click(object sender, RoutedEventArgs e)
+        {
+            gridsize = 6;
+        }
+        private void fourByFour_Click(object sender, RoutedEventArgs e)
+        {
+            gridsize = 4;
+        }
+
         public void Next(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(nameInput.Text))

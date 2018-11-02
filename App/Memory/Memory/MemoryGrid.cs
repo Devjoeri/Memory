@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -89,7 +90,7 @@ namespace Memory
             List<Card> images = new List<Card>();
             for(int i = 0; i < rows*columns; i++)
             {
-                int imageNr = i % 8 + 1; //De 8 is hardcoded, moet nog een variabele worden
+                int imageNr = i % rows * columns/2 + 1; //De 8 is hardcoded, moet nog een variabele worden
                 ImageSource source = new BitmapImage(new Uri("Images/"+imageNr+".png", UriKind.Relative));
                 images.Add(new Card(source, imageNr));
             }
@@ -97,7 +98,6 @@ namespace Memory
             int n = images.Count;
             for (int i = 0; i < images.Count; i++)
             {
-                
                 int rnd = random.Next(i + 1);
 
                 Card value = images[rnd];
@@ -115,13 +115,16 @@ namespace Memory
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CardClick(object sender, MouseButtonEventArgs e)
+        private async void CardClick(object sender, MouseButtonEventArgs e)
         {
             Image card = (Image)sender;
-            //Console.WriteLine(card.getNumber());
             Card front = (Card)card.Tag;
-            card.Source = front.flipCard();
-            cardsTurned++;
+            if (!front.matched())
+            {
+                card.Source = front.flipCard();
+                cardsTurned++;
+            }
+            
             if (cardsTurned == 1)
             {
                 oldcard = card;
@@ -133,21 +136,23 @@ namespace Memory
                 string player = sidebar.getTurn();
                 if (front.getNumber() == turnedCard.getNumber())
                 {
+                    turnedCard.matched();
+                    front.matched();
                     sidebar.AddPoint(player);
                 }
                 else
                 {
-                        oldcard.Source = turnedCard.flipCard();
-                        //System.Threading.Thread.Sleep(1000);
-                        card.Source = front.flipCard();
-                        //turnedCard = new BitmapImage(new Uri("Images/front.png", UriKind.Relative));
+                    await Task.Run(() =>
+                    {
+                        
+                        Thread.Sleep(500);
+                    });
+                    oldcard.Source = turnedCard.flipCard();
+                    card.Source = front.flipCard();
                 }
                 sidebar.setTurn(player);
                 cardsTurned = 0;
             }
-
-
         }
-
     }
 }
