@@ -90,7 +90,7 @@ namespace Memory
             List<Card> images = new List<Card>();
             for(int i = 0; i < rows*columns; i++)
             {
-                int imageNr = i % rows * columns/2 + 1; //De 8 is hardcoded, moet nog een variabele worden
+                int imageNr = i % 8 + 1; //De 8 is hardcoded, moet nog een variabele worden
                 ImageSource source = new BitmapImage(new Uri("Images/"+imageNr+".png", UriKind.Relative));
                 images.Add(new Card(source, imageNr));
             }
