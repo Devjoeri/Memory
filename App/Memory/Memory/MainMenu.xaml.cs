@@ -64,5 +64,10 @@ namespace Memory
         {
 
         }
+
+        private void settings_Game(object sender, RoutedEventArgs e)
+        {
+            _navigator.Navigate(new settings(_navigator));
+        }
     }
 }

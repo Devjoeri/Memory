@@ -107,6 +107,7 @@ namespace Memory
             return images;
         }
 
+
         /// <summary>
         /// Een event handler die af gaat als iemand op een kaart klikt, daar na slaan we de eerste op,
         /// en gaan we kijken of de tweede keuze overeen komt met de eerste.

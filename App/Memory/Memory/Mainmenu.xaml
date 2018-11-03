@@ -19,13 +19,15 @@
         <Viewbox HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Height="80">
             <TextBlock Text="My Little Memory" VerticalAlignment="Stretch" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Comic Sans MS" Foreground="White" Margin="10 0 10 0"/>
         </Viewbox>
-        <StackPanel VerticalAlignment="Center">
+        <StackPanel VerticalAlignment="Center" Height="381" Margin="0,59,0,10">
 
             <Image Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="180" Width="280" Source="Images/1.png" />
 
             <Button Click="SinglePlayer"  Content="Single Player"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFE0BAFF"  BorderBrush="{x:Null}" FontWeight="Bold" FontSize="16" FontFamily="Comic Sans MS" Foreground="White" Margin="244,0,244,0" Padding="0,10,0,10"/>
             <Button Click="Highscores"  Content="Highscores"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Margin="244,10,244,0"  Padding="0,10,0,10"/>
+            <Button Content="Settings"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="settings_Game"  BorderBrush="{x:Null}" Background="#FFDC00FF" FontFamily="Comic Sans MS" FontSize="16" Foreground="White" FontWeight="Bold" Margin="244,10,244,0"  Padding="0,10,0,10"/>
             <Button Content="Exit"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="exit_Game"  BorderBrush="{x:Null}" Background="#FFDC00FF" FontFamily="Comic Sans MS" FontSize="16" Foreground="White" FontWeight="Bold" Margin="244,10,244,0"  Padding="0,10,0,10"/>
+           
         </StackPanel>
 
     </Grid>

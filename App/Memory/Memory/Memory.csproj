@@ -94,6 +94,9 @@
     </Compile>
     <Compile Include="PlayerScore.cs" />
     <Compile Include="Save.cs" />
+    <Compile Include="settings.xaml.cs">
+      <DependentUpon>settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sidebar.cs" />
     <Compile Include="Winner.xaml.cs">
       <DependentUpon>Winner.xaml</DependentUpon>
@@ -152,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NaamInvoerenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

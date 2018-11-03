@@ -114,6 +114,19 @@
             <param name="turn"></param>
             <param name="size"></param>
         </member>
+        <member name="T:Memory.settings">
+            <summary>
+            Interaction logic for settings.xaml
+            </summary>
+            <summary>
+            settings
+            </summary>
+        </member>
+        <member name="M:Memory.settings.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:Memory.Sidebar">
             <summary>
             De aparte class voor de sidebar.
