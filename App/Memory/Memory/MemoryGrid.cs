@@ -156,13 +156,13 @@ namespace Memory
                 {
                     await Task.Run(() =>
                     {
-                        turnedCard.deselect();
-                        front.deselect();
-                        oldcard.Source = turnedCard.flipCard();
-                        card.Source = front.flipCard();
+                        
                         Thread.Sleep(500);
                     });
-                    
+                    turnedCard.deselect();
+                    front.deselect();
+                    oldcard.Source = turnedCard.flipCard();
+                    card.Source = front.flipCard();
                 }
                 sidebar.setTurn(player);
                 cardsTurned = 0;
