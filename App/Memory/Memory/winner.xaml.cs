@@ -34,11 +34,13 @@ namespace Memory
         private void to_Mainmenu(object sender, RoutedEventArgs e)
         {
             _navigator.Navigate(new Mainmenu(_navigator));
+            this.Close();
         }
 
         private void to_Highscore(object sender, RoutedEventArgs e)
         {
             _navigator.Navigate(new Highscores(_navigator));
+            this.Close();
         }
 
         
