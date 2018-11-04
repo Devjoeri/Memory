@@ -18,6 +18,19 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:Memory.Help">
+            <summary>
+            Interaction logic for Help.xaml
+            </summary>
+            <summary>
+            Help
+            </summary>
+        </member>
+        <member name="M:Memory.Help.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:Memory.Hervatten">
             <summary>
             In deze class hervatten we een game die we hebben opgeslagen van een eerder potje.

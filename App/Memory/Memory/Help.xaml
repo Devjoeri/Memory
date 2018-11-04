@@ -8,7 +8,7 @@
         Title="Help" Height="202" Width="400">
     <DockPanel Margin="10">
         <Canvas DockPanel.Dock="Bottom" Height="32">
-            <Button Canvas.Right="10" Canvas.Top="3" Padding="16 4 16 4">OK.</Button>
+            <Button Canvas.Right="10" Canvas.Top="3" Padding="16 4 16 4" Click="Close" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16">OK.</Button>
         </Canvas>
         
         <TextBlock FontSize="18">

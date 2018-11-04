@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace Memory
@@ -122,6 +123,12 @@ namespace Memory
             button.Content = buttonName;
             button.HorizontalAlignment = HorizontalAlignment.Center;
             button.Click += method;
+            button.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFDC00FF"));
+            button.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFF"));
+            button.FontWeight = FontWeights.Bold;
+            button.FontFamily = new FontFamily("Comic Sans MS");
+            button.BorderBrush = null;
+            button.Width = 200;
 
             Grid.SetColumn(button, 0);
             Grid.SetRow(button, pos);
@@ -191,7 +198,8 @@ namespace Memory
         }
         private void HelpClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Help");
+            Help helpwindow = new Help();
+            helpwindow.ShowDialog();
             
         }
         private void GiveUp(object sender, RoutedEventArgs e)
