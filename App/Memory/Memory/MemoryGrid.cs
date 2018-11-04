@@ -30,13 +30,16 @@ namespace Memory
         private object pic;
         private Image oldcard;
         private List<Card> images;
+        private int countedCards = 0;
         Highscore _highscore;
+        private INavigator _navigator;
 
-        public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows, string[] setup)
+        public MemoryGrid(Grid sidebar, Grid grid, int colums, int rows, string[] setup, INavigator navigator)
         {
             this.grid = grid;
             this.rows = rows;
             this.columns = colums;
+            this._navigator = navigator;
             this.sidebar = new Sidebar(sidebar, setup, images);
             AddImages();
             initGrid(colums, rows);
@@ -90,7 +93,7 @@ namespace Memory
             List<Card> images = new List<Card>();
             for(int i = 0; i < rows*columns; i++)
             {
-                int imageNr = i % 8 + 1; //De 8 is hardcoded, moet nog een variabele worden
+                int imageNr = i % (rows * columns / 2) + 1; //now variable
                 ImageSource source = new BitmapImage(new Uri("Images/"+imageNr+".png", UriKind.Relative));
                 images.Add(new Card(source, imageNr));
             }
@@ -140,12 +143,17 @@ namespace Memory
                     turnedCard.matched();
                     front.matched();
                     sidebar.AddPoint(player);
+                    countedCards += 2;
+                    if (countedCards == (rows*columns))
+                    {
+                        winner winnerWindow = new winner(_navigator, player);
+                        winnerWindow.ShowDialog();
+                    }
                 }
                 else
                 {
                     await Task.Run(() =>
                     {
-                        
                         Thread.Sleep(500);
                     });
                     oldcard.Source = turnedCard.flipCard();

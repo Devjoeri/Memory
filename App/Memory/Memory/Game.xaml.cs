@@ -27,7 +27,7 @@ namespace Memory
         {
             _navigator = navigator;
             InitializeComponent();
-            grid = new MemoryGrid(SideBar, CardGrid, Int32.Parse(setup[3]), Int32.Parse(setup[3]), setup);
+            grid = new MemoryGrid(SideBar, CardGrid, Int32.Parse(setup[3]), Int32.Parse(setup[3]), setup, _navigator);
             
         }
     }

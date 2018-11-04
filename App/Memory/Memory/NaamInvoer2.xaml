@@ -31,9 +31,9 @@
                 </Grid.ColumnDefinitions>
 
             </Grid>-->
-            <Button Grid.Column="0"  Content="Makkelijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="130,147,518,107" FontSize="18" Height="56" Width="130"/>
-            <Button  Content="Gemiddeld" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="341,147,307,107" Padding="20,15" FontSize="18" Width="130"/>
-            <Button  Content="Moeilijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="545,147,103,107" Padding="20,15" FontSize="18" Width="130"/>
+            <Button Grid.Column="0"  Content="Makkelijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="130,147,518,107" FontSize="18" Height="56" Width="130" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+            <Button  Content="Gemiddeld" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="341,147,307,107" Padding="20,15" FontSize="18" Width="130" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+            <Button  Content="Moeilijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="545,147,103,107" Padding="20,15" FontSize="18" Width="130" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
 
             <!--<Grid>
                 <Grid.ColumnDefinitions>
@@ -42,8 +42,8 @@
                 </Grid.ColumnDefinitions>
 
             </Grid>-->
-            <Button Click="Back" Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="201,0,471,20" Padding="30,4" FontSize="18"/>
-            <Button Click="Next" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="488,0,181,20" Padding="16,4" FontSize="18"/>
+            <Button Click="Back" Content="Terug" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="201,0,471,20" Padding="30,4" FontSize="18" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+            <Button Click="Next" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="488,0,181,20" Padding="16,4" FontSize="18" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
             <Label x:Name="noNameLabel_2" HorizontalAlignment="Center" Margin="311,216,71,58" VerticalAlignment="Center" Height="36" Width="396" FontSize="16"/>
         </Grid>
     </Grid>

@@ -18,7 +18,7 @@ namespace Memory
     /// <summary>
     /// Hier de pop-up voor de winnaar, en de redirections voor de knoppen "Mainmenu"  en "Highscores"
     /// </summary>
-    public partial class winner : Page
+    public partial class winner : Window
     {
         //string playerName = "Placeholder PlayerName";
 

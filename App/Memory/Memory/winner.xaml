@@ -1,4 +1,4 @@
-﻿<Page x:Class="Memory.winner"
+﻿<Window x:Class="Memory.winner"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,4 +18,4 @@
             <Button Content="Highscores" HorizontalAlignment="Center" Margin="587,57,85,11" VerticalAlignment="Center" Width="128" Height="36" FontSize="18" Click="to_Highscore"/>
         </Grid>
     </Grid>
-</Page>
+</Window>

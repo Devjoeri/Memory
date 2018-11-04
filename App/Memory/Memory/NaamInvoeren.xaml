@@ -31,10 +31,10 @@
                 </Grid.ColumnDefinitions>
 
             </Grid>-->
-            <Button Content="4x4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="520,157,65,102" Padding="10,15" FontSize="18" Width="195" Height="61" Click="fourByFour_Click"/>
-            <Button Content="6x6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="97,157,517,102" Padding="10,15" FontSize="18" Width="166" Height="61" Click="sixBySix_Click"/>
+            <Button Content="4x4" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="520,157,65,102" Padding="10,15" FontSize="18" Width="195" Height="61" Click="fourByFour_Click" Background="#FFE0BAFF"  BorderBrush="{x:Null}" FontWeight="Bold" FontFamily="Comic Sans MS" Foreground="White"/>
+            <Button Content="6x6" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="97,157,517,102" Padding="10,15" FontSize="18" Width="166" Height="61" Click="sixBySix_Click" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold" />
 
-            <Button Click="Next" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="340,257,320,27" Padding="16,4" FontSize="18" Height="36" Width="120"/>
+            <Button Click="Next" Content="Volgende" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="340,257,320,27" Padding="16,4" FontSize="18" Height="36" Width="120" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
             <Label x:Name="noNameLabel" HorizontalAlignment="Center" Margin="282,157,254,102" VerticalAlignment="Center" Width="244" FontSize="16" Height="61"/>
         </Grid>
     </Grid>
