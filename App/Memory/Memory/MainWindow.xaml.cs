@@ -25,8 +25,12 @@ namespace Memory
         public MainWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             Navigate(new Mainmenu(this));
         }
+
+        public object FormWindowState { get; }
+
         public void Navigate(Page p)
         {
             MainFrame.Navigate(p);
