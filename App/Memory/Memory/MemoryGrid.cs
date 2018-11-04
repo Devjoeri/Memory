@@ -121,11 +121,14 @@ namespace Memory
         /// <param name="e"></param>
         private async void CardClick(object sender, MouseButtonEventArgs e)
         {
+            //need to refactor this CardClick part!
             Image card = (Image)sender;
             Card front = (Card)card.Tag;
-            if (!front.matched())
+            if (!front.isSelected())
             {
+                front.select();
                 card.Source = front.flipCard();
+
                 cardsTurned++;
             }
             
@@ -138,10 +141,9 @@ namespace Memory
             if (cardsTurned == 2)
             {
                 string player = sidebar.getTurn();
-                if (front.getNumber() == turnedCard.getNumber())
+                if (front.getNumber() == turnedCard.getNumber() && front.isSelected() && turnedCard.isSelected())
                 {
-                    turnedCard.matched();
-                    front.matched();
+                    
                     sidebar.AddPoint(player);
                     countedCards += 2;
                     if (countedCards == (rows*columns))
@@ -156,6 +158,8 @@ namespace Memory
                     {
                         Thread.Sleep(500);
                     });
+                    turnedCard.deselect();
+                    front.deselect();
                     oldcard.Source = turnedCard.flipCard();
                     card.Source = front.flipCard();
                 }
