@@ -24,6 +24,7 @@ namespace Memory
         private int player1Score, player2Score = 0;
 
         private string turn;
+        private INavigator _navigator;
 
         private Label lplayer1 = new Label();
         private Label lplayer2 = new Label();
@@ -32,7 +33,7 @@ namespace Memory
         Highscore _highscore;
         List<Card> images;
 
-        public Sidebar(Grid SideBar, string[] setup, List<Card> images)
+        public Sidebar(Grid SideBar, string[] setup, List<Card> images, INavigator navigator)
         {
             _highscore = new Highscore();
             this.images = images;
@@ -40,13 +41,14 @@ namespace Memory
             this.player1 = setup[1];
             this.player2 = setup[2];
             this.turn = player1;
+            this._navigator = navigator;
             initGrid();
             AddLabel();
             AddTurn();
             AddScore();
-            AddButton("Opgeven", 1);
-            AddButton("Help", 2);
-            AddButton("Opslaan", 3);
+            AddButton("Opgeven", 1, GiveUp);
+            AddButton("Help", 2, HelpClick);
+            AddButton("Opslaan", 3, SaveClick);
         }
         public void initGrid()
         {
@@ -114,12 +116,12 @@ namespace Memory
             sidebar.Children.Add(title);
         }
 
-        private void AddButton(string buttonName, int pos)
+        private void AddButton(string buttonName, int pos, RoutedEventHandler method)
         {
             Button button = new Button();
             button.Content = buttonName;
             button.HorizontalAlignment = HorizontalAlignment.Center;
-            button.Click += SaveClick;
+            button.Click += method;
 
             Grid.SetColumn(button, 0);
             Grid.SetRow(button, pos);
@@ -186,6 +188,18 @@ namespace Memory
             new Save(player1, player1Score, player2, player2Score,getTurn(),4, images);
             _highscore.addScore(new PlayerScore(player1, player1Score));
             _highscore.addScore(new PlayerScore(player2, player2Score));
+        }
+        private void HelpClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Help");
+            
+        }
+        private void GiveUp(object sender, RoutedEventArgs e)
+        {
+            setTurn(getTurn());
+            winner winnerWindow = new winner(_navigator, getTurn());
+            winnerWindow.ShowDialog();
+
         }
     }
 }
