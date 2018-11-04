@@ -78,6 +78,9 @@
     <Compile Include="Giveup.xaml.cs">
       <DependentUpon>Giveup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Hervatten.xaml.cs">
       <DependentUpon>Hervatten.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,9 @@
     </Page>
     <Page Include="Giveup.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Hervatten.xaml">
