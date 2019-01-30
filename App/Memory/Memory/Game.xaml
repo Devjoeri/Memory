@@ -8,8 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Game">
 
-    <DockPanel x:Name="GameGrid">
-        <Grid x:Name="SideBar" DockPanel.Dock="Right" Width="256">
+    <DockPanel Background="#222" x:Name="GameGrid">
+        <Grid  x:Name="SideBar" DockPanel.Dock="Right" Width="256">
 
         </Grid>
         <Grid x:Name="CardGrid">

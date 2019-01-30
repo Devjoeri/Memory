@@ -37,6 +37,11 @@ namespace Memory
             _navigator = navigator;
         }
 
+        public NaamInvoer2()
+        {
+
+        }
+
         public void Next(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(naamSpeler2.Text))
@@ -62,6 +67,14 @@ namespace Memory
                 noNameLabel_2.Content = "U heeft geen naam ingevuld!";
             }
 
+        }
+        public bool hasSameName(string name, string name2)
+        {
+            if (name == name2)
+            {
+                return true;
+            }
+            return false;
         }
 
         public void Back(object sender, RoutedEventArgs e)

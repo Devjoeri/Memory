@@ -8,13 +8,13 @@ using System.Windows.Media.Imaging;
 
 namespace Memory
 {
-    class Card
+    public class Card
     {
-        private ImageSource image;
-        private int number;
-        private bool flipped = false;
-        private ImageSource front;
-        private bool selected = false;
+        public ImageSource image;
+        public int number;
+        public bool flipped = false;
+        public ImageSource front;
+        public bool selected = false;
 
         public Card(ImageSource image, int number) {
             this.image = image;

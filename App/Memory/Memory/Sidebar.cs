@@ -34,7 +34,9 @@ namespace Memory
         Highscore _highscore;
         List<Card> images;
 
-        public Sidebar(Grid SideBar, string[] setup, List<Card> images, INavigator navigator)
+        MemoryGrid memo;
+
+        public Sidebar(Grid SideBar, string[] setup, List<Card> images, INavigator navigator,MemoryGrid memo)
         {
             _highscore = new Highscore();
             this.images = images;
@@ -43,6 +45,7 @@ namespace Memory
             this.player2 = setup[2];
             this.turn = player1;
             this._navigator = navigator;
+            this.memo = memo;
             initGrid();
             AddLabel();
             AddTurn();
@@ -78,6 +81,19 @@ namespace Memory
                 lplayer2.Dispatcher.Invoke(new Action(() => { lplayer2.Content = "Score " + this.player2 + ": " + this.player2Score; }));
             }
         }
+        public int getPlayerScore(string player)
+        {
+            int playerScore = 0;
+            if (player == player1)
+            {
+                playerScore = player1Score;
+            }
+            if (player == player2)
+            {
+                playerScore = player2Score;
+            }
+            return playerScore;
+        }
         /// <summary>
         /// Hier setten we de turn
         /// </summary>
@@ -110,6 +126,7 @@ namespace Memory
             Label title = new Label();
             title.Content = "The game";
             title.FontSize = 35;
+            title.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFF"));
             title.HorizontalAlignment = HorizontalAlignment.Center;
 
             Grid.SetColumn(title, 0);
@@ -143,6 +160,7 @@ namespace Memory
             
             lplayer1.Content = "Score "+ this.player1 + ": "+ this.player1Score;
             lplayer1.FontSize = 10;
+            lplayer1.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFF"));
             lplayer1.HorizontalAlignment = HorizontalAlignment.Center;
 
             Grid.SetColumn(lplayer1, 0);
@@ -155,6 +173,7 @@ namespace Memory
             lplayer2.Content = content;
             lplayer2.FontSize = 10;
             lplayer2.HorizontalAlignment = HorizontalAlignment.Center;
+            lplayer2.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFF"));
 
             Grid.SetColumn(lplayer2, 0);
             Grid.SetRow(lplayer2, 7);
@@ -172,6 +191,7 @@ namespace Memory
             Label turn = new Label();
             turn.Content = "Aan zet";
             turn.FontSize = 10;
+            turn.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFF"));
             turn.HorizontalAlignment = HorizontalAlignment.Center;
 
             Grid.SetColumn(turn, 0);
@@ -181,6 +201,7 @@ namespace Memory
             
             tplayer.Content = getTurn();
             tplayer.FontSize = 15;
+            tplayer.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFF"));
             tplayer.HorizontalAlignment = HorizontalAlignment.Center;
 
             Grid.SetColumn(tplayer, 0);
@@ -192,9 +213,9 @@ namespace Memory
         private void SaveClick(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Save");
-            new Save(player1, player1Score, player2, player2Score,getTurn(),4, images);
-            _highscore.addScore(new PlayerScore(player1, player1Score));
-            _highscore.addScore(new PlayerScore(player2, player2Score));
+            new Save(player1, player1Score, player2, player2Score,getTurn(),4);
+            //_highscore.addScore(new PlayerScore(player1, player1Score));
+            //_highscore.addScore(new PlayerScore(player2, player2Score));
         }
         private void HelpClick(object sender, RoutedEventArgs e)
         {

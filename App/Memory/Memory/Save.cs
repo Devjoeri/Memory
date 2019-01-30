@@ -52,7 +52,7 @@ namespace Memory
         /// <param name="score2"></param>
         /// <param name="turn"></param>
         /// <param name="size"></param>
-        public Save(string player1, int score1, string player2, int score2, string turn,int size, List<Card> images)
+        public Save(string player1, int score1, string player2, int score2, string turn,int size)
         {
             //var directory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
             JavaScriptSerializer ser = new JavaScriptSerializer();
@@ -64,7 +64,7 @@ namespace Memory
             this.score2 = score2;
             this.turn = turn;
             this.size = size;
-            this.imageList = images;
+            //this.imageList = images;
             kaarten = new List<card>();
 
             //Plaatje op welke plek
@@ -75,7 +75,7 @@ namespace Memory
                     //int image = getCardImage(row,column);
                     //int image = 0;
                     //kaarten.Add(new card(row,column,image,true));
-                    Console.WriteLine(images);
+                    //Console.WriteLine(images);
                 }
             }
 

@@ -40,7 +40,7 @@ namespace Memory
             this.rows = rows;
             this.columns = colums;
             this._navigator = navigator;
-            this.sidebar = new Sidebar(sidebar, setup, images, _navigator);
+            this.sidebar = new Sidebar(sidebar, setup, images, _navigator, this);
             AddImages();
             initGrid(colums, rows);
         }
@@ -148,6 +148,8 @@ namespace Memory
                     countedCards += 2;
                     if (countedCards == (rows*columns))
                     {
+                        _highscore = new Highscore();
+                        _highscore.addScore(new PlayerScore(player, sidebar.getPlayerScore(player)));
                         winner winnerWindow = new winner(_navigator, player);
                         winnerWindow.ShowDialog();
                     }

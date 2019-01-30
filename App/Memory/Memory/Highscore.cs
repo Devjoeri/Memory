@@ -15,8 +15,17 @@ namespace Memory
 
         public Highscore()
         {
-            writeHighscores(_HighScores);
-            _HighScores = getScores();
+            if (getScores() == null)
+            {
+                writeHighscores(_HighScores);
+                
+            }
+            else
+            {
+                _HighScores = getScores();
+            }
+            //this.addScore(new PlayerScore("Joeri", 10));
+            //writeHighscores(placeToId(_HighScores));
         }
 
         /// <summary>
@@ -62,10 +71,9 @@ namespace Memory
             else
             {
                 _HighScores.Add(score);
-                _HighScores = _HighScores.OrderByDescending(_scores => _scores.Score).ToList();
-                writeHighscores(placeToId(_HighScores));
+                _HighScores = _HighScores.OrderByDescending(_scores => _scores.Score).ToList(); 
             }
-
+            writeHighscores(placeToId(_HighScores));
         }
 
         /// <summary>

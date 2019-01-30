@@ -31,6 +31,11 @@ namespace Memory
         Highscore _highscore;
 
         private INavigator _navigator;
+
+        public Highscores()
+        {
+        }
+
         public Highscores(INavigator navigator)
         {
             InitializeComponent();

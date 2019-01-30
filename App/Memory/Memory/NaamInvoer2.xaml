@@ -31,10 +31,11 @@
                 </Grid.ColumnDefinitions>
 
             </Grid>-->
+            <!--
             <Button Grid.Column="0"  Content="Makkelijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="130,147,518,107" FontSize="18" Height="56" Width="130" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
             <Button  Content="Gemiddeld" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="341,147,307,107" Padding="20,15" FontSize="18" Width="130" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
             <Button  Content="Moeilijk" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="545,147,103,107" Padding="20,15" FontSize="18" Width="130" BorderBrush="{x:Null}" Background="#FFEB6EFF" Foreground="White" FontFamily="Comic Sans MS" FontWeight="Bold"/>
-
+            -->
             <!--<Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
